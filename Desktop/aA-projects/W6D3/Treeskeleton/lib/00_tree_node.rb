@@ -1,10 +1,11 @@
-require "byebug"
+require_relative "../../KnightsTrail/KnightPathFinder"
 class PolyTreeNode
     attr_reader :value,:parent,:children
-    def initialize(value)
+    def initialize(value,pos)
         @value=value
         @parent=nil
         @children=[]
+        @self.root_node=pos
     end
 
     def parent=(node)
@@ -53,3 +54,4 @@ class PolyTreeNode
 
 
 end
+

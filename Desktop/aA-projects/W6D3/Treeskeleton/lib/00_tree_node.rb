@@ -1,19 +1,15 @@
-require_relative "../../KnightsTrail/KnightPathFinder"
 class PolyTreeNode
     attr_reader :value,:parent,:children
-    def initialize(value,pos)
+    def initialize(value)
         @value=value
         @parent=nil
         @children=[]
-        @self.root_node=pos
     end
 
     def parent=(node)
         @parent.children.delete(self) if !@parent.nil? 
         @parent=node
         @parent.children<<self unless @parent.nil?
-
-
     end
 
     def add_child(child_node)

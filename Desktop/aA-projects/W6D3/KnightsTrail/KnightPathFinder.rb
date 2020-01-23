@@ -1,14 +1,11 @@
-
+require 'byebug'
 require_relative "../Treeskeleton/lib/00_tree_node.rb"
 class KnightPathFinder
 BoardSize=8
     def initialize(startPos)
         @board=Array.new(BoardSize){Array.new(BoardSize)}
-        @self.root_node=Tree.new(startPos)
+        # @self.root_node=PolyTreeNode.new(startPos)
         build_move_tree
-        @considered_positions=[startPos]
-
-
     end
 
     # build the move tree, beginning with self.root_node
@@ -17,16 +14,17 @@ BoardSize=8
     end
 
     def self.valid_moves(pos)
+        @considered_positions=[pos] 
         row,col=pos
-        return "invalid position passed" if !row.between?(BoardSize-1) || !col.between?(BoardSize-1)
-        @considered_positions<<@board[row+1][col]     if (row+1).between?(BoardSize-1)
-        @considered_positions<<@board[row-1][col]     if (row-1).between?(BoardSize-1)
-        @considered_positions<<@board[row][col+1]     if (col+1).between?(BoardSize-1)
-        @considered_positions<<@board[row][col-1]     if (col-1).between?(BoardSize-1)
-        @considered_positions<<@board[row+1][col+1]   if (row+1).between?(BoardSize-1) && (col+1).between?(BoardSize-1) 
-        @considered_positions<<@board[row-1][col+1]   if (row-1).between?(BoardSize-1) && (col+1).between?(BoardSize-1) 
-        @considered_positions<<@board[row+1][col-1]   if (row+1).between?(BoardSize-1) && (col-1).between?(BoardSize-1) 
-        @considered_positions<<@board[row-1][col-1]   if (row-1).between?(BoardSize-1) && (col-1).between?(BoardSize-1) 
+        return "invalid position passed" if !row.between?(0,BoardSize-1) || !col.between?(0,BoardSize-1)
+        @considered_positions<<[row+1,col]   if (row+1).between?(0,BoardSize-1)
+        @considered_positions<<[row-1,col]     if (row-1).between?(0,BoardSize-1)
+        @considered_positions<<[row,col+1]     if (col+1).between?(0,BoardSize-1)
+        @considered_positions<<[row,col-1]     if (col-1).between?(0,BoardSize-1)
+        @considered_positions<<[row+1,col+1]   if (row+1).between?(0,BoardSize-1) && (col+1).between?(0,BoardSize-1) 
+        @considered_positions<<[row-1,col+1]   if (row-1).between?(0,BoardSize-1) && (col+1).between?(0,BoardSize-1) 
+        @considered_positions<<[row+1,col-1]   if (row+1).between?(0,BoardSize-1) && (col-1).between?(0,BoardSize-1) 
+        @considered_positions<<[row-1,col-1]   if (row-1).between?(0,BoardSize-1) && (col-1).between?(0,BoardSize-1) 
     end
 
     def new_move_positions(pos)
@@ -49,3 +47,5 @@ BoardSize=8
 end
 
 
+    # k=KnightPathFinder.new([2,2])
+    p KnightPathFinder.valid_moves([2,2])

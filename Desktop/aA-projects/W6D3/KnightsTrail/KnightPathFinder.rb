@@ -45,7 +45,7 @@ BoardSize=8
                     node=node.parent
         end
         parentArr.pop
-        parentArr.reverse
+        parentArr.map(&:value).reverse
     end
 
     def self.valid_moves(pos)

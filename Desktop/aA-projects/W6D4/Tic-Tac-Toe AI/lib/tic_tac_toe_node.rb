@@ -25,7 +25,7 @@ class TicTacToeNode
 
 
  def winning_node?(evaluator)
-      # return @board.winner == evaluator if @board.over?
+       return @board.winner == evaluator if @board.over?
 
         if @next_mover_mark==evaluator
           return true if @board.over? 

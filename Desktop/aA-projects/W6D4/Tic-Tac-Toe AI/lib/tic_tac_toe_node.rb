@@ -10,6 +10,8 @@ class TicTacToeNode
     end
 
     def losing_node?(evaluator)
+            return board.won? && board.winner != evaluator if board.over?
+     
       # case where opponent just moved so our turn
             # return board.won? && board.winner != evaluator
         if @next_mover_mark==evaluator

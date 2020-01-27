@@ -81,17 +81,3 @@ class Board
 end
 
  
-
-
- # if @name1==current_player_name
-          #     next if currentPos==13
-          #      if currentPos==6
-          #       @cups[currentPos]+=[:stone]
-          #                 @cups[start_pos].pop
-          #                 next
-          # else next if currentPos==6
-          #    if currentPos==13
-          #       @cups[currentPos]+=[:stone]
-          #                 @cups[start_pos].pop
-          #                 next
-          #    end

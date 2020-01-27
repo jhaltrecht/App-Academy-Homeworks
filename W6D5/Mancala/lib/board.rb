@@ -26,8 +26,6 @@ class Board
 
   def make_move(start_pos, current_player_name)
     raise "invalid move" unless valid_move?(start_pos)
-                # debugger if current_player_name=="James" && start_pos==9
-
     counter=0
     countOfSkips=0
       until @cups[start_pos].length==0
@@ -38,8 +36,6 @@ class Board
                 countOfSkips+=1
                 next
                end
-              # if currentPos==6
-              #   @cups[currentPos]<<
           else 
             if currentPos==6
             countOfSkips+=1
@@ -50,8 +46,6 @@ class Board
           @cups[start_pos].pop
       end
           render
-                # debugger if current_player_name=="James" && start_pos==10
-
         return next_turn(currentPos)
   end
 
@@ -73,9 +67,15 @@ class Board
   end
 
   def one_side_empty?
+   return true if @cups[0..5].all?{|cup| cup.empty?} 
+  return true if @cups[7..12].all?{|cup| cup.empty?} 
+   false
   end
 
   def winner
+    return :draw if @cups[6].length==@cups[13].length
+    return @name1 if @cups[6].length>@cups[13].length
+    return @name2 if @cups[6].length<@cups[13].length
   end
   
 end

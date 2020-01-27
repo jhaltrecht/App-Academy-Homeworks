@@ -26,29 +26,40 @@ class Board
 
   def make_move(start_pos, current_player_name)
     raise "invalid move" unless valid_move?(start_pos)
+                # debugger if current_player_name=="James" && start_pos==9
+
     counter=0
+    countOfSkips=0
       until @cups[start_pos].length==0
         counter+=1
         currentPos=(start_pos+counter)%14
           if @name1==current_player_name
-              next if currentPos==13
+               if currentPos==13
+                countOfSkips+=1
+                next
+               end
               # if currentPos==6
               #   @cups[currentPos]<<
-          else next if currentPos==6
+          else 
+            if currentPos==6
+            countOfSkips+=1
+            next
+            end
           end
           @cups[currentPos].push(:stone)
           @cups[start_pos].pop
       end
           render
-          # debugger if current_player_name=="James"
+                # debugger if current_player_name=="James" && start_pos==10
+
         return next_turn(currentPos)
   end
 
   def next_turn(ending_cup_idx)
     
-   return :switch if @cups[ending_cup_idx].empty?
-   return :prompt if @cups[ending_cup_idx]== 6 || 13
-   return ending_cup_idx if !@cups[ending_cup_idx].empty?
+  return :prompt if ending_cup_idx== 6 || ending_cup_idx==13
+   return :switch if @cups[ending_cup_idx].length==1
+   return ending_cup_idx if @cups[ending_cup_idx].length>1
 
     # helper method to determine whether #make_move returns :switch, :prompt, or ending_cup_idx
   end
@@ -66,8 +77,10 @@ class Board
 
   def winner
   end
+  
 end
 
+ 
 
 
  # if @name1==current_player_name

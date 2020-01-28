@@ -1,12 +1,14 @@
 require_relative "piece"
+require_relative "slideable"
 class Bishop < Piece
-    attr_reader :symbol
+    include Slideable
     def initialize
         @symbol="♝"
-        super(color,board,pos)
     end
 
     def move_dirs
         diagonal_dirs
-    end
+    end 
 end
+
+b=Bishop.new()

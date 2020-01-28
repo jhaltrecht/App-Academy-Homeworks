@@ -10,6 +10,13 @@ class Employee
     def bonus(multiplier)
         bonus = @salary * multiplier
     end
+
+    def boss=(boss)
+    @boss = boss
+    boss.add_employee(self) unless boss.nil?
+
+    boss
+  end
 end
 
 class Manager<Employee

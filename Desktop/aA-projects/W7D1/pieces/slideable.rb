@@ -1,20 +1,19 @@
 module Slideable
-    @HORIZONTAL_DIRS=[
+    HORIZONTAL_DIRS=[
         [0,1],
         [0,-1]
-     ]
-    @DIAGONAL_DIRS=[
+].freeze
+    DIAGONAL_DIRS=[
         [1,1],
         [-1,-1],
         [-1,1],
         [1,-1]
-    ]
+].freeze
 
-    @VERTICAL_DIRS=[
+    VERTICAL_DIRS=[
         [1,0],
         [-1,0]
-    ]
-  
+].freeze
 
     def moves
         movesArr=[]
@@ -22,18 +21,21 @@ module Slideable
         move_directions.each do |(dx,dy)|
         movesArr+=grow_unblocked_moves_in_dir(dx,dy)
         end
-        movesArr
+        movesArr.uniq
     end
 
     def grow_unblocked_moves_in_dir(dx,dy)
+
+        unblockMovesArr=[]
         row,col=@pos
         potNewPosition=[row+dx,col+dy]
-        if @board.valid_pos?(potNewPosition) 
-            movesArr<<@board[potNewPosition]
-            movesArr+=grow_unblocked_moves_in_dir(row+dx,col+dy)
-        else movesArr<<@board[potNewPosition] if self.color!= @board[potNewPosition].color
+        if @board.valid_pos?(potNewPosition) && @board.empty?(potNewPosition)
+            unblockMovesArr<<potNewPosition
+            unblockMovesArr+=grow_unblocked_moves_in_dir(dx+dx,dy+dy)
+        elsif @board.valid_pos?(potNewPosition)
+             unblockMovesArr<<potNewPosition if @color!= @board[potNewPosition].color 
         end
-        movesArr
+        unblockMovesArr
     end
 
 

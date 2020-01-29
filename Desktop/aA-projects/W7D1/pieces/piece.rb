@@ -4,6 +4,8 @@ require "colorize"
 
 
 class Piece
+    attr_reader :board,:color
+    attr_accessor :pos
     def initialize(color,board,pos)
          @pos=pos
          @board=board
@@ -15,13 +17,14 @@ class Piece
     end
 
     def inspect
-        symbol
+        # [symbol,pos]
+        pos
     end
 
-    def pos=(val)
-        pos=val
-        val
-    end 
+     def to_s
+    " #{symbol} " 
+  end
+
 end
 
     

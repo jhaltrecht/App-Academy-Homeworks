@@ -65,7 +65,7 @@ class Board
     end
 
     def empty?(pos)
-      return true if valid_pos?(pos) && self[pos]==nil 
+      return true if self[pos]==nil 
       false
     end
 
@@ -74,9 +74,11 @@ class Board
 end
 
 
- b=Board.new
-  b.move_piece([1,3], [5,3])
-  p b[[0,2]].moves
+  b=Board.new
+#  p b.render
+  b.move_piece([1,2],[5,0])
+    b.move_piece([1,3], [5,3])
+p b[[0,3]].moves
 #  b.move_piece([1,1], [4,1])
 
 #     b.move_piece([0,3], [4,6])

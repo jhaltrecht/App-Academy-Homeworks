@@ -25,14 +25,19 @@ module Slideable
     end
 
     def grow_unblocked_moves_in_dir(dx,dy)
-
         unblockMovesArr=[]
         row,col=@pos
-        potNewPosition=[row+dx,col+dy]
+        potNewPosition=[row+dx,col+dy]   
         if @board.valid_pos?(potNewPosition) && @board.empty?(potNewPosition)
             unblockMovesArr<<potNewPosition
-            unblockMovesArr+=grow_unblocked_moves_in_dir(dx+dx,dy+dy)
-        elsif @board.valid_pos?(potNewPosition)
+            row,col=potNewPosition
+            dx+=1 if dx>0
+            dy+=1 if dy>0
+            dx-=1 if dx<0
+            dy-=1 if dy<0
+            unblockMovesArr
+            unblockMovesArr+=grow_unblocked_moves_in_dir(dx,dy)
+        elsif @board.valid_pos?(potNewPosition) && !@board.empty?(potNewPosition)
              unblockMovesArr<<potNewPosition if @color!= @board[potNewPosition].color 
         end
         unblockMovesArr

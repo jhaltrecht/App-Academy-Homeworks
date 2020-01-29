@@ -1,18 +1,30 @@
 require_relative "slideable"
 require_relative "stepable"
-require_relative "../board"
+require "colorize"
+
 
 class Piece
     def initialize(color,board,pos)
-        @pos=pos
-        @board=Board.new()
-        @color=color
+         @pos=pos
+         @board=board
+         @color=color
+        board.add_piece(self, pos)
     end
-# should return an array of places a Piece can move to
+
     def valid_moves
-        movesArr=
     end
+
+    def inspect
+        symbol
+    end
+
+    def pos=(val)
+        pos=val
+        val
+    end 
 end
+
+    
 
 
 

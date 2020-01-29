@@ -7,7 +7,7 @@ class Board
     GridRowsSize=8
     def initialize
         
-        # @sentinel = NullPiece.instance
+        @sentinel = NullPiece.instance
         @rows=Array.new(GridRowsSize){Array.new(GridRowsSize,sentinel)}
         setUpBoard
     end
@@ -26,6 +26,7 @@ class Board
           Pawn.new(:white, self, [1, j]) 
           Pawn.new(:black, self, [7, j]) 
          end
+         
     end
 
     def add_piece(piece,pos)
@@ -42,10 +43,10 @@ class Board
     
     def move_piece(start_pos,end_pos)
         # raise invalid if not in piece valid
-       raise "invalid position" if self[start_pos]==nil || self[end_pos]!=nil
+       raise "invalid position" if self[start_pos]==sentinel || self[end_pos]!=sentinel
        self[end_pos]=self[start_pos]
        self[end_pos].pos=end_pos
-       self[start_pos]=nil
+       self[start_pos]=sentinel
     end
 
     def [](pos)
@@ -65,7 +66,7 @@ class Board
     end
 
     def empty?(pos)
-      return true if self[pos]==nil 
+      return true if self[pos]==sentinel 
       false
     end
 
@@ -76,9 +77,13 @@ end
 
   b=Board.new
 #  p b.render
-  b.move_piece([1,2],[5,0])
+    b.move_piece([1,5],[5,5])
+
+  b.move_piece([1,4],[5,0])
     b.move_piece([1,3], [5,3])
-p b[[0,3]].moves
+    p b.render
+
+p b[[0,6]].moves
 #  b.move_piece([1,1], [4,1])
 
 #     b.move_piece([0,3], [4,6])

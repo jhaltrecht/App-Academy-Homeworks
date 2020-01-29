@@ -105,14 +105,8 @@ end
 
 
   b=Board.new
-   b.move_piece([6,4],[3,0])
-   b.move_piece([0,0],[5,4])
-   b.move_piece([0,3],[5,5])
-   b.move_piece([6,5],[3,1])
-   b.move_piece([0,5],[5,6])
-       b.render
-
-   p b.checkmate?(:black)
+   p b.render
+   p b[[1,0]].moves
 #     b.move_piece([1,3], [5,3])
 #     p b.render
 # debugger

@@ -14,6 +14,7 @@ class Pawn<Piece
     row,col=@pos
     movesArr<<[row+1,col] if forward_dirs==1
     movesArr<<[row+1,side_attacks+col] if side_attacks==1 || side_attacks==-1
+    movesArr<<[row+2,col] if at_start_row? && @board.empty?([row+2,col])||@board[[row+2,col]].color!=@color
     movesArr
   end
 

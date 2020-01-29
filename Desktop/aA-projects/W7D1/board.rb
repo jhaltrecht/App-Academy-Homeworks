@@ -20,11 +20,11 @@ class Board
         
         back_pieces.each_with_index do |piece_class, j|
             piece_class.new(:white, self, [0, j])
-            piece_class.new(:black, self, [6, j])
+            piece_class.new(:black, self, [7, j])
         end
          8.times do |j|
           Pawn.new(:white, self, [1, j]) 
-          Pawn.new(:black, self, [7, j]) 
+          Pawn.new(:black, self, [6, j]) 
          end
          
     end
@@ -70,20 +70,53 @@ class Board
       false
     end
 
+    def checkmate?(color)
+        kingPos=find_king?(color)
+        kRow,kCol=kingPos
+        dupBoard=@rows.map{|row| row.dup}
+         @rows[kRow][kCol].moves.all? do |move|
+           dupBoard[kRow][kCol].pos=move
+           in_check?(color)
+         end
+        # if all king moves in check return true
+    end
 
+    def find_king?(color)
+         @rows.each do |row| 
+            row.each do |col| 
+                return col.pos if col.is_a?(King) && col.color==color
+            end
+        end
+        nil
+    end
+
+    def in_check?(color)
+        kingPos=find_king?(color)
+        raise "King can't be found" if kingPos==nil
+        @rows.each do |row| 
+            row.each do |col| 
+              return true if col.moves.include?(kingPos)
+            end
+        end
+        false
+    end
 
 end
 
 
   b=Board.new
-  p b.render
-     b.move_piece([6,0],[2,0])
+   b.move_piece([6,4],[3,0])
+   b.move_piece([0,0],[5,4])
+   b.move_piece([0,3],[5,5])
+   b.move_piece([6,5],[3,1])
+   b.move_piece([0,5],[5,6])
+       b.render
 
-#   b.move_piece([1,4],[5,0])
+   p b.checkmate?(:black)
 #     b.move_piece([1,3], [5,3])
 #     p b.render
 # debugger
-p b[[1,1]].moves
+
 #  b.move_piece([1,1], [4,1])
 
 #     b.move_piece([0,3], [4,6])

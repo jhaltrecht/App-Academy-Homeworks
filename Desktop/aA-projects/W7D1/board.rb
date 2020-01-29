@@ -76,14 +76,14 @@ end
 
 
   b=Board.new
-#  p b.render
-    b.move_piece([1,5],[5,5])
+  p b.render
+     b.move_piece([6,0],[2,0])
 
-  b.move_piece([1,4],[5,0])
-    b.move_piece([1,3], [5,3])
-    p b.render
-
-p b[[0,6]].moves
+#   b.move_piece([1,4],[5,0])
+#     b.move_piece([1,3], [5,3])
+#     p b.render
+# debugger
+p b[[1,1]].moves
 #  b.move_piece([1,1], [4,1])
 
 #     b.move_piece([0,3], [4,6])

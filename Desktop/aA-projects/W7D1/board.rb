@@ -2,11 +2,10 @@ require_relative "piecesRef"
 require "byebug"
 
 class Board
-    attr_reader :sentinel
+    attr_reader  :rows
     # 8 rows in a chess board.  Use this for columns as well
     GridRowsSize=8
     def initialize
-        
         @sentinel = NullPiece.instance
         @rows=Array.new(GridRowsSize){Array.new(GridRowsSize,sentinel)}
         setUpBoard
@@ -17,7 +16,6 @@ class Board
         back_pieces = [
         Rook, Knight, Bishop, Queen, King, Bishop, Knight, Rook
         ]
-        
         back_pieces.each_with_index do |piece_class, j|
             piece_class.new(:white, self, [0, j])
             piece_class.new(:black, self, [7, j])
@@ -33,8 +31,6 @@ class Board
        self[pos]=piece
     end
 
-   
-    
     def move_piece(start_pos,end_pos)
         # raise invalid if not in piece valid
        raise "invalid position" if self[start_pos]==sentinel || self[end_pos]!=sentinel
@@ -72,7 +68,6 @@ class Board
            dupBoard[kRow][kCol].pos=move
            in_check?(color)
          end
-        # if all king moves in check return true
     end
 
     def find_king?(color)
@@ -94,9 +89,10 @@ class Board
         end
         false
     end
+    private
+
+  attr_reader :sentinel
 
 end
 
 
-  b=Board.new
-   p b.render

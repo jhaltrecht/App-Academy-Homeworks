@@ -20,7 +20,7 @@ class Piece
 
      def to_s
     " #{symbol} " 
-  end
+    end
 
 end
 

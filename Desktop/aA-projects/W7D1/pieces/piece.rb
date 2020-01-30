@@ -1,6 +1,6 @@
 require_relative "slideable"
 require_relative "stepable"
-require "colorize"
+
 
 
 class Piece
@@ -11,9 +11,6 @@ class Piece
          @board=board
          @color=color
         board.add_piece(self, pos)
-    end
-
-    def valid_moves
     end
 
     def inspect

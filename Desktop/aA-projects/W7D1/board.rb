@@ -33,13 +33,7 @@ class Board
        self[pos]=piece
     end
 
-    def render
-        puts "   #{(0..7).to_a.join("  ")}"
-        (0..7).each do |row|
-            # debugger if row==1
-            puts "#{row} #{@rows[row].join("")}"
-        end
-    end
+   
     
     def move_piece(start_pos,end_pos)
         # raise invalid if not in piece valid
@@ -106,13 +100,3 @@ end
 
   b=Board.new
    p b.render
-   p b[[1,0]].moves
-#     b.move_piece([1,3], [5,3])
-#     p b.render
-# debugger
-
-#  b.move_piece([1,1], [4,1])
-
-#     b.move_piece([0,3], [4,6])
-
-#  b.add_piece(Bishop.new(:white, self, [2,2]),[2,2])

@@ -8,26 +8,13 @@ class Display
         @board=board
         @cursor=Cursor.new([0,0], board)
     end
-    
-    # def render
-    #     puts "   #{(0..7).to_a.join("  ")}"
-    #     (0..7).each do |row|
-    #         # debugger if row==1
-    #         puts "#{row} #{@board.rows[row].join("").colorize(:)}"
-    #     end
-    # end
-
 
   def build_grid
     @board.rows.map.with_index do |row, i|
-      build_row(row, i)
-    end
-  end
-
-  def build_row(row, i)
     row.map.with_index do |piece, j|
       color_options = colors_for(i, j)
       piece.to_s.colorize(color_options)
+    end
     end
   end
 
@@ -59,6 +46,8 @@ class Display
     end
 
 end
+
 d=Display.new(Board.new)
+# debugger
 p d.renderLoop
 

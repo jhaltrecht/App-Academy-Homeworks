@@ -4,6 +4,7 @@ require_relative "board"
 
 require_relative "cursor"
 class Display
+    attr_reader :board
     def initialize(board)
         @board=board
         @cursor=Cursor.new([0,0], board)
@@ -38,16 +39,36 @@ class Display
         end
     end
 
+    # def render
+    #     system("clear")
+    #     puts "Arrow keys to move, space or enter to confirm."
+    #     build_grid.each { |row| puts row.join }
+    # end
+
     def render
-        system("clear")
-        puts "Arrow keys to move, space or enter to confirm."
-        build_grid.each { |row| puts row.join }
-
+        puts "   #{(0..7).to_a.join("  ")}"
+        (0..7).each do |row|
+            # debugger if row==1
+            puts "#{row} #{board.rows[row].join("")}"
+        end
     end
-
 end
 
 d=Display.new(Board.new)
-# debugger
-p d.renderLoop
+d.board.move_piece([6,4],[4,4])
+d.board.move_piece([7,5],[4,3])
+d.board.move_piece([1,5],[2,0])
+d.board.move_piece([1,4],[2,1])
+
+d.board.move_piece([7,3],[3,4])
+
+d.board.move_piece([0,5],[5,0])
+
+d.board.move_piece([7,0],[0,5])
+
+
+p d.board.render
+
+p d.board.checkmate?(:white)
+p d.board.in_check?(:white)
 

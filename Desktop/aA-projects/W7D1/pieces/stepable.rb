@@ -34,7 +34,7 @@ KNIGHTMOVES = [
             if @board.valid_pos?(newPotPosition) && @board.empty?(newPotPosition)
                 movesArr<<newPotPosition 
             elsif @board.valid_pos?(newPotPosition) && !@board.empty?(newPotPosition)
-                unblockMovesArr<<newPotPosition if @color!= @board[newPotPosition].color 
+                movesArr<<newPotPosition if @color!= @board[newPotPosition].color 
             end
         end
         movesArr

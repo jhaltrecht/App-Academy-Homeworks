@@ -55,20 +55,28 @@ class Display
 end
 
 d=Display.new(Board.new)
-d.board.move_piece([6,4],[4,4])
-d.board.move_piece([7,5],[4,3])
-d.board.move_piece([1,5],[2,0])
-d.board.move_piece([1,4],[2,1])
+d.board.move_piece!([6,4],[4,4])
+# d.board.move_piece!([7,5],[4,3])
+# d.board.move_piece!([1,5],[2,0])
+d.board.move_piece!([1,4],[3,0])
+# d.board.move_piece!([7,7],[3,5])
+# d.board.move_piece!([7,3],[2,4])
+# d.board.move_piece!([1,3],[4,0])
 
-d.board.move_piece([7,3],[3,4])
 
-d.board.move_piece([0,5],[5,0])
+d.board.move_piece!([0,5],[5,0])
+d.board.move_piece!([0,7],[1,4])
+d.board.move_piece!([7,0],[0,3])
+# d.board.move_piece!([0,3],[7,0])
 
-d.board.move_piece([7,0],[0,5])
+# d.board.move_piece!([7,2],[3,2])
+d.board.move_piece!([0,4],[0,5])
+
 
 
 p d.board.render
-
-p d.board.checkmate?(:white)
 p d.board.in_check?(:white)
+p d.board.checkmate?(:white)
 
+# [1,5]
+# queen [3,4]

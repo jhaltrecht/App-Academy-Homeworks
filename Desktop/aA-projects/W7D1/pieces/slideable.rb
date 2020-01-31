@@ -19,7 +19,7 @@ module Slideable
         movesArr=[]
         move_directions=move_dirs
         move_directions.each do |(dx,dy)|
-        movesArr+=grow_unblocked_moves_in_dir(dx,dy)
+            movesArr+=grow_unblocked_moves_in_dir(dx,dy)
         end
         movesArr.uniq
     end
@@ -35,7 +35,6 @@ module Slideable
             dy+=1 if dy>0
             dx-=1 if dx<0
             dy-=1 if dy<0
-            unblockMovesArr
             unblockMovesArr+=grow_unblocked_moves_in_dir(dx,dy)
         elsif @board.valid_pos?(potNewPosition) && !@board.empty?(potNewPosition)
              unblockMovesArr<<potNewPosition if @color!= @board[potNewPosition].color 

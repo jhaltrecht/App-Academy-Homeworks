@@ -15,7 +15,6 @@ class Piece
 
     def inspect
         [symbol,pos]
-pos
     end
 
     def to_s
@@ -27,18 +26,21 @@ pos
         # dupBoard=@board.dup
         movesArr=moves
         movesArr.select! do |move|
+            oldPiece=@board[move]
             next false if @pos==move
             start_pos=@pos
            begin
-            @board.move_piece(@pos,move)
+            @board.move_piece!(@pos,move)
            rescue
             next false
            end 
             if @board.in_check?(color)
-                @board.move_piece(@pos,start_pos)
+                @board.move_piece!(@pos,start_pos)
+                @board.add_piece(oldPiece,move)
                 next false
             end
-            @board.move_piece(@pos,start_pos)
+            @board.move_piece!(@pos,start_pos)
+            @board.add_piece(oldPiece,move)
            true
         end
         movesArr

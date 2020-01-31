@@ -33,20 +33,21 @@ class Board
 
     # cheater move method to move anywhere
     # when using this,have other methods do checks 
-    def move_piece(start_pos,end_pos)
+    def move_piece!(start_pos,end_pos)
         # raise invalid if not in piece valid
-        # debugger if self[start_pos]==sentinel || self[end_pos]!=sentinel || start_pos==end_pos 
        raise "invalid position" if self[start_pos]==sentinel || (self[end_pos]!=sentinel && (self[start_pos].color == self[end_pos].color)) || start_pos==end_pos 
-        piece = self[start_pos]
-       self[end_pos]=piece
-       self[start_pos]=sentinel
+       self[end_pos]=self[start_pos]
+       self[start_pos]=@sentinel
      self[end_pos].pos=end_pos 
     #  self[4,4].pos=[6,4]
-
-
-    
     end
 
+# doesn't modify board
+    # def move_piece(start_pos,end_pos)
+    #     newBoard=@rows.dup
+    #     newBoard.move_piece!
+    #     newBoard
+    # end
 
     # self[end_pos] = piece
     # self[start_pos] = sentinel
@@ -81,29 +82,36 @@ class Board
         kingPos=find_king?(color)
         kRow,kCol=kingPos
         movesArr=@rows[kRow][kCol].moves
+        # if king has no moves and is in check raise error
         if movesArr==[] 
-           return true if in_check?(color)
-           return false
+           raise "something is wrong"
         end
+        # check if all moves by king will not take him out of check
          bool=movesArr.all? do |move|
             start_pos=self[[kRow,kCol]].pos
-           move_piece(start_pos,move)
+            oldPiece=self[move]
+           move_piece!(start_pos,move)
+        #    debugger if !in_check?(color)
            checkedEl=in_check?(color)
-           move_piece(move,start_pos)
+            move_piece!(move,start_pos)
+            add_piece(oldPiece,move)
            checkedEl
          end
          
+        #  if king will always be in check
          if bool
               @rows.each do |row| 
                     row.each do |col| 
-                        next if col.is_a?(NullPiece)
-                        if col.color==color && !(col.is_a?(King))
+                        next if col.is_a?(NullPiece) || col.color!=color 
+                        next if col.is_a?(King)
+                            # debugger if col.is_a?(Rook) 
+                            # debugger if col.valid_moves.length>0
                             return false if col.valid_moves.length>0
-                        end
                     end
               end
+              
         end
-         false
+         true
     end
 
       def in_check?(color)
@@ -111,11 +119,8 @@ class Board
         raise "King can't be found" if kingPos==nil
         @rows.each do |row| 
             row.each do |col| 
-                # debugger if col.is_a?(Array)
              next if col.is_a?(NullPiece)
              next if color==col.color
-                next if col.is_a?(King) 
-                # debugger if col.is_a?(Pawn)
               return true if col.moves.include?(kingPos) && col.color!=color
             end
         end

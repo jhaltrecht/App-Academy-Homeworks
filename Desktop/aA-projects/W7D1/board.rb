@@ -33,18 +33,32 @@ class Board
 
     # cheater move method to move anywhere
     # when using this,have other methods do checks 
-    def move_piece!(start_pos,end_pos)
-        # raise invalid if not in piece valid
+    def move_piece!(turn_color,start_pos,end_pos)
+        raise "You must choose your own color" if self[start_pos].color != turn_color
        raise "invalid position" if self[start_pos]==sentinel || (self[end_pos]!=sentinel && (self[start_pos].color == self[end_pos].color)) || start_pos==end_pos 
+       debugger if !self[start_pos].moves.include?(end_pos)
        self[end_pos]=self[start_pos]
        self[start_pos]=@sentinel
      self[end_pos].pos=end_pos 
-    #  self[4,4].pos=[6,4]
     end
+    # Only allows you to make valid moves
+    def move_piece(start_pos,end_pos)
+        
+         if self[start_pos].valid_moves.include?(end_pos)
+            self[end_pos]=self[start_pos]
+            self[start_pos]=@sentinel
+            self[end_pos].pos=end_pos 
+            return 
+         end
+         raise "board still in check" if in_check?(self[start_pos].color)
+    end
+
+    
 
 # doesn't modify board
     # def move_piece(start_pos,end_pos)
     #     newBoard=@rows.dup
+    
     #     newBoard.move_piece!
     #     newBoard
     # end
@@ -83,17 +97,17 @@ class Board
         kRow,kCol=kingPos
         movesArr=@rows[kRow][kCol].moves
         # if king has no moves and is in check raise error
-        if movesArr==[] 
+        if movesArr==[] && in_check?(color)
            raise "something is wrong"
         end
         # check if all moves by king will not take him out of check
          bool=movesArr.all? do |move|
             start_pos=self[[kRow,kCol]].pos
             oldPiece=self[move]
-           move_piece!(start_pos,move)
+           move_piece!(color,start_pos,move)
         #    debugger if !in_check?(color)
            checkedEl=in_check?(color)
-            move_piece!(move,start_pos)
+            move_piece!(color,move,start_pos)
             add_piece(oldPiece,move)
            checkedEl
          end

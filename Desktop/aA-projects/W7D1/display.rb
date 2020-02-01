@@ -4,10 +4,19 @@ require_relative "board"
 
 require_relative "cursor"
 class Display
-    attr_reader :board
+    attr_reader :board,:cursor
     def initialize(board)
         @board=board
         @cursor=Cursor.new([0,0], board)
+        @booleanVariable=false
+    end
+
+    def toggleBooleanVariable
+        @booleanVariable=!@booleanVariable
+        if booleanVariable
+          puts self[pos].moves
+          puts @board.in_check?(color)
+        end
     end
 
   def build_grid
@@ -39,44 +48,18 @@ class Display
         end
     end
 
-    # def render
-    #     system("clear")
-    #     puts "Arrow keys to move, space or enter to confirm."
-    #     build_grid.each { |row| puts row.join }
-    # end
-
     def render
-        puts "   #{(0..7).to_a.join("  ")}"
-        (0..7).each do |row|
-            # debugger if row==1
-            puts "#{row} #{board.rows[row].join("")}"
-        end
+        system("clear")
+        puts "Arrow keys to move, space or enter to confirm."
+        build_grid.each { |row| puts row.join }
     end
+
+    # def render
+    #     puts "   #{(0..7).to_a.join("  ")}"
+    #     (0..7).each do |row|
+    #         # debugger if row==1
+    #         puts "#{row} #{board.rows[row].join("")}"
+    #     end
+    # end
 end
 
-d=Display.new(Board.new)
-d.board.move_piece!([6,4],[4,4])
-# d.board.move_piece!([7,5],[4,3])
-# d.board.move_piece!([1,5],[2,0])
-d.board.move_piece!([1,4],[3,0])
-# d.board.move_piece!([7,7],[3,5])
-# d.board.move_piece!([7,3],[2,4])
-# d.board.move_piece!([1,3],[4,0])
-
-
-d.board.move_piece!([0,5],[5,0])
-d.board.move_piece!([0,7],[1,4])
-d.board.move_piece!([7,0],[0,3])
-# d.board.move_piece!([0,3],[7,0])
-
-# d.board.move_piece!([7,2],[3,2])
-d.board.move_piece!([0,4],[0,5])
-
-
-
-p d.board.render
-p d.board.in_check?(:white)
-p d.board.checkmate?(:white)
-
-# [1,5]
-# queen [3,4]

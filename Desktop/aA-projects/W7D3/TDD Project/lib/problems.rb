@@ -53,22 +53,38 @@ end
 
    
 class TowersOfHanoiGame
+    attr_reader :disks
     def initialize
         @disks=[[1,3],[],[4,5,7]]
     end
 
+    def render
+        puts "Tower 0: #{@disks[0].join('  ')} "
+      puts "Tower 1: #{@disks[1].join('  ')} "
+      puts "Tower 2: #{@disks[2].join('  ')} "
+    end
+
     def play
-        # until game.won
+        until self.won
+            puts "choose a starting row to move the top element from"
+            start_row=gets.chomp.to_i
+            puts "choose the row to move this disk to"
+            end_row=gets.chomp.to_i
+            move(start_row,end_row)
+            render
+        end
     end
 
     def move(start_pos,end_pos)
         raise "can't move from a blank space" if @disks[start_pos].empty?
         if @disks[end_pos].empty?
            topEl=@disks[start_pos].pop
-           return @disks[end_pos]<<topEl
+            @disks[end_pos]<<topEl
+        else raise "can't move a bigger object on top" if @disks[start_pos].last>@disks[end_pos].last
+             topEl=@disks[start_pos].pop
+             @disks[end_pos]<<topEl
         end
-        raise "can't move a bigger object on top" if @disks[start_pos].last>@disks[end_pos].last
-
+        @disks
     end
 
     def won
@@ -87,3 +103,5 @@ class TowersOfHanoiGame
 
 end
      
+disk=TowersOfHanoiGame.new
+disk.play

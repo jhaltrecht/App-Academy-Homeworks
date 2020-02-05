@@ -86,3 +86,25 @@ describe "my_transpose" do
     end
 
 end
+
+describe "stock_picker" do 
+    subject(:arr){[3,2,5,6,9]}
+    let(:newArr){stock_picker(arr)}
+
+    it "returns an array of length 2" do 
+        expect(newArr.length).to eq(2)
+    end
+
+    it "should not modify the original array" do 
+        expect{newArr}.to_not change{arr}
+    end
+
+    it "should output the best day to buy and sell each stock" do 
+        expect(newArr).to eq([1,4])
+    end
+
+    it "does not buy stocks if it only goes down" do 
+        expect(stock_picker([5, 4, 3, 2, 1])).to be_nil
+    end
+
+end

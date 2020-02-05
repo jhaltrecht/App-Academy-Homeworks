@@ -10,6 +10,10 @@ describe "Card" do
         it "should have a suit that is initialized" do 
             expect(ace.suit).to eq("♠")
         end
+
+        it "should calculate the correct rank" do
+            expect(ace.rank).to eq(14)
+        end
     end
     context "must have appropriate suit and face value" do
         let(:ace_suit){Card.new("A","O")}
@@ -23,6 +27,8 @@ describe "Card" do
             faces=["2","3","4","5","6","7","8","9","10","J","Q","K","A"]
             expect{ace_value}.to raise_error("invalid face value") 
         end
+
+            
     end
 
     

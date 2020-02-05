@@ -17,6 +17,7 @@ class Deck
 
     def shuffle!
         @cards.shuffle!
+        @cards
     end
 
 end

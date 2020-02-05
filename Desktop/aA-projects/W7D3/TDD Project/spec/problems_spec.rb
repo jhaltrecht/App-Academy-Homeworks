@@ -19,11 +19,11 @@ describe "my_uniq" do
     end
 
     it "should return a new array" do
-        expect(newArr).to_not be(arr)
+        expect(newArr).not_to be(arr)
     end
 
     it "should not modify the original array" do 
-        expect{newArr}.to_not change{arr}
+        expect{newArr}.not_to change{arr}
     end
 end
 
@@ -63,7 +63,7 @@ describe "two_sum" do
     end
 
     it "should not modify the original array" do 
-        expect{newArr}.to_not change{arr}
+        expect{newArr}.not_to change{arr}
     end
 
 
@@ -78,7 +78,7 @@ describe "my_transpose" do
     end
 
     it "should not modify the original array" do 
-        expect{newArr}.to_not change{arr}
+        expect{newArr}.not_to change{arr}
     end
 
     it "should return an array that is transposed" do 
@@ -96,7 +96,7 @@ describe "stock_picker" do
     end
 
     it "should not modify the original array" do 
-        expect{newArr}.to_not change{arr}
+        expect{newArr}.not_to change{arr}
     end
 
     it "should output the best day to buy and sell each stock" do 
@@ -106,5 +106,50 @@ describe "stock_picker" do
     it "does not buy stocks if it only goes down" do 
         expect(stock_picker([5, 4, 3, 2, 1])).to be_nil
     end
+
+end
+
+describe "TowersOfHanoiGame" do
+    subject(:disks) { TowersOfHanoiGame.new }
+    # array assigned will be [[1,3],[],[4,5,7]]}
+    describe "#move" do 
+        let(:result){disks.move(0,2)}
+        it "should raise an error if you try to move a bigger object on a smaller one" do
+            expect{disks.move(2,0)}.to raise_error("can't move a bigger object on top")
+        end
+
+        it "allows you to move a smaller object on top of a bigger one" do 
+            expect{disks.move(0,2)}.not_to raise_error
+        end
+
+        it "allows moving to a blank space" do
+            expect { disks.move(0, 1) }.not_to raise_error
+        end
+
+         it "does not allow moving from a blank space" do
+            expect { disks.move(1, 2) }.to raise_error("can't move from a blank space")
+        end
+        
+        it "should modify the original array" do 
+            expect{result}.to change{disks}
+        end
+    end
+    describe "#won?" do
+        it "should know when the game is won" do 
+            disks.move(2,1)
+            disks.move(2,1)
+            disks.move(2,1)
+            disks.move(0,1)
+            disks.move(0,1)
+            expect(disks.won).to be true
+        end
+        it "should know when the game is not won and not be won at the start" do 
+            expect(disks.won).not_to be true
+        end
+    end
+
+        
+    
+
 
 end

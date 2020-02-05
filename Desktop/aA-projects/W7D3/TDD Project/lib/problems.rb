@@ -52,3 +52,38 @@ end
      end
 
    
+class TowersOfHanoiGame
+    def initialize
+        @disks=[[1,3],[],[4,5,7]]
+    end
+
+    def play
+        # until game.won
+    end
+
+    def move(start_pos,end_pos)
+        raise "can't move from a blank space" if @disks[start_pos].empty?
+        if @disks[end_pos].empty?
+           topEl=@disks[start_pos].pop
+           return @disks[end_pos]<<topEl
+        end
+        raise "can't move a bigger object on top" if @disks[start_pos].last>@disks[end_pos].last
+
+    end
+
+    def won
+        if @disks.count{|disk| disk.empty?}==2 
+            @disks.each do |disk|  
+                if !disk.empty?
+                    return true if disk==disk.sort.reverse
+                    return false
+                end
+            end
+        end
+   false
+   end
+
+
+
+end
+     

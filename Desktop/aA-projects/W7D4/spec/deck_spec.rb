@@ -7,6 +7,10 @@ describe "Deck" do
             expect(deck.cards.length).to eq(52)
         end
 
+        it "should be able to shuffle the cards" do 
+            expect(deck.cards).to_not eq(deck.shuffle!)
+        end
+
         it "should have 13 cards per suit" do
             count=Hash.new(0)
             deck.cards.each do|card|

@@ -1,6 +1,7 @@
 require 'card'
 
 describe "Card" do
+    context "#initialize"
     subject(:ace){Card.new("A","♠")}
     it "should have a value that is initalized" do
         expect(ace.value).to eq("A")

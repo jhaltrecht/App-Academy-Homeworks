@@ -66,9 +66,9 @@ class TowersOfHanoiGame
 
     def play
         until self.won
-            puts "choose a starting row to move the top element from"
+            puts "choose a starting row to move the top element from (0-2)"
             start_row=gets.chomp.to_i
-            puts "choose the row to move this disk to"
+            puts "choose the row to move this disk to (0-2)"
             end_row=gets.chomp.to_i
             move(start_row,end_row)
             render
@@ -76,6 +76,7 @@ class TowersOfHanoiGame
     end
 
     def move(start_pos,end_pos)
+        raise "you must choose a row from 0-2" unless start_pos.between?(0,2) && end_pos.between?(0,2)
         raise "can't move from a blank space" if @disks[start_pos].empty?
         if @disks[end_pos].empty?
            topEl=@disks[start_pos].pop

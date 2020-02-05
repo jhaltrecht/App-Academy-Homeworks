@@ -8,3 +8,4 @@ describe "hand" do
     it "should have 5 cards" do
         expect(hand.hand.length).to eq(5)
     end
+end

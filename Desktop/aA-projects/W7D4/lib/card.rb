@@ -5,7 +5,6 @@ class Card
     def initialize(value,suit)
         raise "invalid suit" unless SUITS.include?(suit)
         raise "invalid face value" unless CARD_FACES.include?(value)
-
         @value=value
         @suit=suit
     end

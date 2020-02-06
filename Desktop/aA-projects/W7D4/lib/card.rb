@@ -6,12 +6,12 @@ class Card
         raise "invalid suit" unless SUITS.include?(suit)
         raise "invalid face value" unless CARD_FACES.include?(value)
         @value=value
-        @rank=to_rank(@value)
+        @rank=to_rank
         @suit=suit
     end
 
-    def to_rank(value)
-        if @value=="J"||"Q"||"K"||"A" 
+    def to_rank
+        if @value=="J"||@value=="Q"||@value=="K"||@value=="A" 
             @rank=11 if @value=="J"
             @rank=12 if @value=="Q"
             @rank=13 if @value=="K"

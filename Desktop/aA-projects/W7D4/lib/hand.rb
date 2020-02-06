@@ -10,7 +10,7 @@ class Hand
     end
 
     def calculate_hand
-        debugger
+        # debugger
         return @hand_value=1 if is_a_flush? && is_a_straight?
         return @hand_value=2 if is_a_four_of_a_kind?
         return @hand_value=3 if is_a_full_house?
@@ -43,8 +43,14 @@ class Hand
     end
 
     def is_a_straight?
+        debugger
+        @hand.sort_by!{|card| card.rank}
         # need to sort my cards and adjust Ace based on position
-        (0...@hand.length-1).all?{|idx| (@hand[idx].rank+1)==@hand[idx+1]}
+        (0...@hand.length-1).all? do |idx| 
+            # deal with Ace
+           next true if @hand.last.value=="A" && @hand.first.value=="2" 
+           (@hand[idx].rank+1)==@hand[idx+1]
+        end
     end
 
     def is_a_three_of_a_kind?

@@ -91,7 +91,6 @@ describe "Hand" do
   
     describe "#calculate_hand" do 
         it "should return correct rank values" do 
-            debugger
        hands.each_with_index {|hand,idx| expect(hand.calculate_hand).to eq(idx+1)}
         end
     end

@@ -95,38 +95,29 @@ describe "Hand" do
         end
     end
 
-
-    # rspec should not test private methods..
-    # describe "#is_a_flush" do
-    #     it "should know if a player has a flush" do 
-    #         allow(card1).to_receive(:suit).and_return("♠") 
-    #         allow(card2).to_receive(:suit).and_return("♠")
-    #         allow(card3).to_receive(:suit).and_return("♠")
-    #         allow(card4).to_receive(:suit).and_return("♠")
-    #         allow(card5).to_receive(:suit).and_return("♠")
-    #         expect(is_a_flush).to be true
-    #     end
-
-    #     it "should know if a player does not have a flush" do 
-    #         allow(card1).to_receive(:suit).and_return("♠") 
-    #         allow(card2).to_receive(:suit).and_return("♠")
-    #         allow(card3).to_receive(:suit).and_return("♦")
-    #         allow(card4).to_receive(:suit).and_return("♠")
-    #         allow(card5).to_receive(:suit).and_return("♠")
-    #         expect(is_a_flush).to be false
-    #     end
-    # end
     describe "#compare_hand" do
         context "if two players have the same rank" do
-  
+                let(:pair2){Hand.new([Card.new("A","♠"),
+                Card.new("7","♣"),
+                Card.new("7","♣"),
+                Card.new("2","♣"),
+                Card.new("3","♠")])}
             it "should know the winner if two cards have the same rank" do
-                
-                    expect(player1).to be winner
+                    expect(pair1.compare_hand(pair2)).to eq(1)
+            end
+
+            it "should know the loser if two cards have the same rank" do
+                    expect(pair2.compare_hand(pair)).to eq(-1)
             end
 
             it "should allow for there to be a draw as well of the pot" do 
-                #  if player_hand.rank==other_player_hand.rank
-                    expect(compare_hand).to be false
+                   let(:pair3){Hand.new([Card.new("A","♦"),
+                    Card.new("A","♣"),
+                    Card.new("7","♣"),
+                    Card.new("2","♦"),
+                    Card.new("3","♦")])
+             }
+                    expect(pair1.compare_hand(pair3)).to eq(0)
             end
         end
 
@@ -134,7 +125,7 @@ describe "Hand" do
         context "if two players do not have the same rank" do 
             it "should award a winner" do
                 # if player_hand.rank>other_player_hand.rank
-                    expect(compare_hand).to be player_hand
+                    expect(flush.compare_hand(pair)).to eq(1)
                 # else expect(compare_hand).to be 
             end
         end

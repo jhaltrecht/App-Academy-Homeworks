@@ -1,5 +1,5 @@
 class Hand
-    attr_reader :hand :hand_value
+    attr_reader :hand, :hand_value
     def initialize(hand)
         raise "hand does not have 5 card" unless hand.length==5
         @hand=hand
@@ -19,6 +19,17 @@ class Hand
         return @hand_value=9 if is_a_high_card?
     end
 
+    def compare_hand(other_hand)
+        raise "this is not a hand" unless other_hand.is_a?(Hand)
+        if player_hand.rank==other_player_hand.rank
+#                 if implement comparison
+#             end
+            
+                # elsif draw? return "draw"
+        elsif player_hand.rank>other_player_hand.rank 
+            return true
+        else return false
+    end
     
     private
     def is_a_flush?
@@ -41,7 +52,7 @@ class Hand
 
     end
 
-    def is_a_two_pair
+    def is_a_two_pair?
 
     end
 
@@ -53,5 +64,10 @@ class Hand
 
     end
 
+    def draw?
+
+    end
+
     # if card the same look to highest value
 end
+

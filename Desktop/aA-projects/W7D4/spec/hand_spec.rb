@@ -1,27 +1,101 @@
 require 'hand'
-
+require 'card'
 describe "Hand" do
-    let(:card1){double("card1")}
-    let(:card2){double("card2")}
-    let(:card3){double("card3")}
-    let(:card4){double("card4")}
-    let(:card5){double("card5")}
-    let(:card6){double("card6")}
-    let(:card7){double("card7")}
-    let(:card8){double("card8")}
-    let(:card9){double("card9")}
-    let(:card10){double("card10")}
 
-    subject (:player_hand){Hand.new([card1,card2,card3,card4,card5])} 
-    let (:other_player_hand){Hand.new([card6,card7,card8,card9,card10])} 
+# SUITS=["♠","♥","♣","♦"]
+    let(:standard){[Card.new("A","♠"),
+    Card.new("J","♠"),
+    Card.new("K","♣"),
+    Card.new("2","♠"),
+    Card.new("5","♠")]}
+
+  
+
+
+    subject(:player_hand) { Hand.new(standard) }
+    
+
 
     describe "#initialize" do
         it "should have 5 cards" do
-            unless player_hand.hand.length==5
-            expect{player_hand}.to raise_error("hand does not have 5 card")
-            end
+            expect{Hand.new(standard[0..3])}.to raise_error("hand does not have 5 cards")
         end
     end
+
+  
+        let(:flush){Hand.new([Card.new("A","♠"),
+        Card.new("J","♠"),
+        Card.new("K","♠"),
+        Card.new("2","♠"),
+        Card.new("5","♠")])}
+        let(:straight){Hand.new([Card.new("A","♠"),
+        Card.new("5","♠"),
+        Card.new("4","♣"),
+        Card.new("2","♠"),
+        Card.new("3","♠")])}
+        let(:straight_flush){Hand.new([Card.new("A","♠"),
+        Card.new("5","♠"),
+        Card.new("4","♠"),
+        Card.new("2","♠"),
+        Card.new("3","♠")])}
+        
+        let(:four_of_a_kind){Hand.new([Card.new("A","♠"),
+        Card.new("A","♠"),
+        Card.new("A","♠"),
+        Card.new("A","♠"),
+        Card.new("3","♠")])}
+        
+        let(:full_house){Hand.new([Card.new("A","♠"),
+        Card.new("A","♠"),
+        Card.new("A","♣"),
+        Card.new("3","♣"),
+        Card.new("3","♠")])
+        }
+
+        let(:three_of_a_kind){Hand.new([Card.new("A","♠"),
+        Card.new("A","♠"),
+        Card.new("A","♠"),
+        Card.new("2","♣"),
+        Card.new("3","♠")])
+        }
+
+        let(:two_pair){Hand.new([Card.new("A","♠"),
+        Card.new("A","♠"),
+        Card.new("2","♠"),
+        Card.new("2","♣"),
+        Card.new("3","♠")])
+        }
+
+
+        let(:pair){Hand.new([Card.new("A","♠"),
+        Card.new("A","♠"),
+        Card.new("7","♠"),
+        Card.new("2","♣"),
+        Card.new("3","♠")])
+        }
+
+        let!(:hands) do
+      [
+        straight_flush,
+        four_of_a_kind,
+        full_house,
+        flush,
+        straight,
+        three_of_a_kind,
+        two_pair,
+        pair,
+        standard]
+    end
+
+
+  
+    describe "#calculate_hand" do 
+        it "should return correct rank values" do 
+       hands.each_with_index {|hand,idx| expect(hand.calculate_hand).to eq(idx+1)}
+        end
+    end
+
+
     # rspec should not test private methods..
     # describe "#is_a_flush" do
     #     it "should know if a player has a flush" do 
@@ -42,10 +116,11 @@ describe "Hand" do
     #         expect(is_a_flush).to be false
     #     end
     # end
-    describe "#compare_hand"
+    describe "#compare_hand" do
         context "if two players have the same rank" do
+  
             it "should know the winner if two cards have the same rank" do
-                # if player_hand.rank==other_player_hand.rank
+                
                     expect(player1).to be winner
             end
 
@@ -63,6 +138,7 @@ describe "Hand" do
                 # else expect(compare_hand).to be 
             end
         end
+    end
 
     describe "#discard" do 
         it "should be able to discard a card" do 
@@ -75,6 +151,5 @@ describe "Hand" do
 
         end
     end
-
    
 end

@@ -1,7 +1,8 @@
 class Hand
+    require_relative 'card'
     attr_reader :hand, :hand_value
     def initialize(hand)
-        raise "hand does not have 5 card" unless hand.length==5
+        raise "hand does not have 5 cards" unless hand.length==5
         @hand=hand
         @hand_value=0
         calculate_hand
@@ -9,10 +10,10 @@ class Hand
 
     def calculate_hand
         return @hand_value=1 if is_a_flush? && is_a_straight?
-        return @hand_value=4 if is_a_flush? 
-        return @hand_value=5 if is_a_straight? 
         return @hand_value=2 if is_a_four_of_a_kind?
         return @hand_value=3 if is_a_full_house?
+        return @hand_value=4 if is_a_flush? 
+        return @hand_value=5 if is_a_straight? 
         return @hand_value=6 if is_a_three_of_a_kind?
         return @hand_value=7 if is_a_two_pair?
         return @hand_value=8 if is_a_pair?

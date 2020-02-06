@@ -21,4 +21,8 @@ class Card
         @rank
     end
 
+    def inspect
+        @value
+    end
+
 end

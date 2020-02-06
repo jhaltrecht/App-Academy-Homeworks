@@ -6,7 +6,6 @@ class Hand
         raise "hand does not have 5 cards" unless hand.length==5
         @hand=hand
         @hand_value=0
-
         calculate_hand
     end
 
@@ -29,14 +28,15 @@ class Hand
 
     def compare_hand(other_hand)
         raise "this is not a hand" unless other_hand.is_a?(Hand)
-        if player_hand.rank==other_player_hand.rank
-#                 if implement comparison
-#             end
+           # check for draw
+            return 0 if draw?(other_hand)
+        if @hand_value==other_hand.hand_value
+            # cards should already be sorted
+            return compare_high(other_hand) if @hand_value==4 || @hand_value==5 || @hand_value==9 || @hand_value==1
             
-                # elsif draw? return "draw"
-        elsif player_hand.rank>other_player_hand.rank 
-            return true
-        else return false
+        elsif @hand_value>other_hand.hand_value
+            return 1
+        else return -1
         end
     end
     
@@ -114,8 +114,18 @@ class Hand
         false
     end
 
-    def draw?
-
+    def draw?(other_hand)
+        @hand.each_with_index.all?{|card,idx| card.value==other_hand.hand[idx].value}
+    end
+# works for flush, high card, straight, and straight flush
+    def compare_high(other_hand)
+         (0..4).each do |idx|
+                if @hand[-1-idx].rank>other_hand[-1-idx].rank
+                    return 1
+                elsif @hand[-1-idx].rank<other_hand[-1-idx].rank
+                    return -1
+                end
+            end
     end
     
 

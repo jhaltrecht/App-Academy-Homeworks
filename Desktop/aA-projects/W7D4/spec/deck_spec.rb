@@ -25,6 +25,10 @@ describe "Deck" do
             end
             expect(count.keys.length).to eq(4)
         end
+
+        it "should have a method for getting the length from a deck instance" do
+            expect(deck.length).to eq(deck.cards.length)
+        end
     end
 
     it "should be able to shuffle the cards" do 

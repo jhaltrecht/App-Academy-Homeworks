@@ -1,3 +1,5 @@
-#  it "should be able to discard and take new cards" do
-
-#     end
+class Player
+    def initialize(name)
+        @name=name
+    end
+end

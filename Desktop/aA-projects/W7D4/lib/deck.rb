@@ -20,4 +20,7 @@ class Deck
         @cards
     end
 
+    def length
+        @cards.length
+    end
 end

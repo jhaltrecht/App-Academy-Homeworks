@@ -6,6 +6,7 @@ class Hand
         raise "hand does not have 5 cards" unless hand.length==5
         @hand=hand
         @hand_value=0
+        @discard_pile=[]
         calculate_hand
     end
 
@@ -43,6 +44,19 @@ class Hand
         end
     end
     
+    def discard(pos)
+        raise "invalid position" unless pos.between?(0,4)
+        raise "you can't discard more than 5 cards" if @hand.length==0
+        # add to end of deck
+        @discard_pile<<@hand.slice!(pos)
+     end 
+
+     def add(card)
+        raise "you can't have more than 5 cards" if @hand.length==5 
+        @hand<<card
+     end
+    
+
     private
     def is_a_flush?
         card_suit=@hand.first.suit
@@ -202,8 +216,8 @@ class Hand
         end
         -1
     end
-    
 
-    # if card the same look to highest value
+     
+
 end
 

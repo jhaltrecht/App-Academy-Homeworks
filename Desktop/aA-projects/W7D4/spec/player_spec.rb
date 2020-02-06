@@ -11,11 +11,11 @@ describe "Player" do
 
     describe "#make_move" do 
     it "should assume the player chooses valid cards to discard" do 
-        expect{card.rank}.to be_between(0,14)
+        expect{card}.to be_between(0,14)
     end
 
-    it "should tell the player to choose again if the cards are not valid" do
-        expect{}
+    it "should tell the player to choose again if the choice is not valid" do
+         expect{}
     end
 
 end
@@ -28,6 +28,7 @@ end
 
     describe "#raise" do 
     end
+
 
 
 end

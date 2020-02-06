@@ -3,22 +3,27 @@ require 'card'
 describe "Hand" do
 
 # SUITS=["♠","♥","♣","♦"]
-    let(:standard){[Card.new("A","♠"),
+    let(:standard){Hand.new([Card.new("A","♠"),
     Card.new("J","♠"),
     Card.new("K","♣"),
     Card.new("2","♠"),
-    Card.new("5","♠")]}
+    Card.new("5","♠")])}
 
   
 
 
-    subject(:player_hand) { Hand.new(standard) }
     
 
 
     describe "#initialize" do
         it "should have 5 cards" do
-            expect{Hand.new(standard[0..3])}.to raise_error("hand does not have 5 cards")
+            expect{Hand.new[Card.new("A","♠"),
+            Card.new("J","♠"),
+            Card.new("K","♣")]}.to raise_error{"hand does not have 5 cards"}
+        end
+
+        it "should be cards from the card class" do 
+            standard.hand.each { |card| expect(card).to be_an_instance_of(Card)}
         end
     end
 
@@ -199,16 +204,45 @@ describe "Hand" do
             end
         end
     end
-
     describe "#discard" do 
-        it "should be able to discard a card" do 
+     
+ let!(:take_cards) { standard.hand[0..1] }
+        it "will remove the card from the hand" do 
+            standard.discard(0)
+            expect(standard.hand).to_not include(take_cards)
+        end
 
+        it "will not let you have less than 0 cards" do 
+            standard.discard(0)
+            standard.discard(0)
+            standard.discard(0)
+            standard.discard(0)
+            standard.discard(0)
+            expect{standard.discard(0)}.to raise_error{"you can't discard more than 5 cards"}
+        end
+
+        it "will raise an error if you give it an invalid position" do
+            expect{standard.discard(8)}.to raise_error{"invalid position"}
         end
     end
 
     describe "#add" do 
-        it "should be able to add a card from the deck" do 
 
+        # it "will subtract a card from the deck" do 
+        #     let(:deck){double(leng)}
+        #     expect()
+        # end
+                let!(:new_card) { Card.new("A","♦") }
+
+        it "will not let you have more than 5 cards" do 
+         expect{standard.add(new_card)}.to raise_error{"you can't have more than 5 cards"}
+        end
+
+
+        it "will add that card to the hand" do 
+            expect(standard.discard(1))
+            standard.add(new_card)
+            expect(standard.hand).to include(new_card)
         end
     end
    

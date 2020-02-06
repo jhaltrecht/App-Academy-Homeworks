@@ -6,18 +6,22 @@ class Hand
         raise "hand does not have 5 cards" unless hand.length==5
         @hand=hand
         @hand_value=0
+
         calculate_hand
     end
 
     def calculate_hand
-        # debugger
+
         return @hand_value=1 if is_a_flush? && is_a_straight?
         return @hand_value=2 if is_a_four_of_a_kind?
+
         return @hand_value=3 if is_a_full_house?
+
         return @hand_value=4 if is_a_flush? 
         return @hand_value=5 if is_a_straight? 
         return @hand_value=6 if is_a_three_of_a_kind?
         return @hand_value=7 if is_a_two_pair?
+
         return @hand_value=8 if is_a_pair?
         return @hand_value=9 if is_a_high_card?
         p @hand_value
@@ -43,13 +47,12 @@ class Hand
     end
 
     def is_a_straight?
-        debugger
         @hand.sort_by!{|card| card.rank}
         # need to sort my cards and adjust Ace based on position
         (0...@hand.length-1).all? do |idx| 
             # deal with Ace
-           next true if @hand.last.value=="A" && @hand.first.value=="2" 
-           (@hand[idx].rank+1)==@hand[idx+1]
+           next true if @hand[-1].value=="A" && @hand.first.value=="2" && idx==3
+           (@hand[idx].rank+1)==@hand[idx+1].rank
         end
     end
 
@@ -70,6 +73,7 @@ class Hand
         count.each_value do |v|
             return true if v==4
         end
+        false
     end
 
     def is_a_full_house?
@@ -77,13 +81,14 @@ class Hand
         @hand.each{|card| count[card.value]+=1}
         oldValue=0
         count.each_value do |v|
+            return false if v!=2 && v!=3
             if oldValue==3
                 return false if v!=2 
             elsif oldValue==2
                 return false if v!=3
             end
-                oldValue=v
         end
+        true
     end
 
     def is_a_two_pair?

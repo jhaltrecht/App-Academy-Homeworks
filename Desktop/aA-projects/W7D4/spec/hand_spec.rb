@@ -74,6 +74,12 @@ describe "Hand" do
         Card.new("3","♠")])
         }
 
+          let(:high_card){Hand.new([Card.new("A","♠"),
+    Card.new("J","♠"),
+    Card.new("K","♣"),
+    Card.new("2","♠"),
+    Card.new("5","♠")])}
+
         let!(:hands) do
       [
         straight_flush,
@@ -84,7 +90,7 @@ describe "Hand" do
         three_of_a_kind,
         two_pair,
         pair,
-        standard]
+        high_card]
     end
 
 

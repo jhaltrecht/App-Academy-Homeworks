@@ -29,6 +29,7 @@ class Hand
         elsif player_hand.rank>other_player_hand.rank 
             return true
         else return false
+        end
     end
     
     private

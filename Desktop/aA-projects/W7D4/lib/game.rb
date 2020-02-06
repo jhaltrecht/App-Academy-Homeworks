@@ -7,6 +7,7 @@ class Game
         @players=[]
         @total=10,000
         @pot=0
+        
     end
 
     def add_to_pot(num)
@@ -15,6 +16,14 @@ class Game
 
     def add_player(name)
         @players<<Player.new(name)
+    end
+
+    def turn 
+        turn=@players[0]
+    end
+
+    def change_turn
+        @players.rotate!
     end
 
     def player_name(idx)

@@ -33,8 +33,11 @@ class Hand
         if @hand_value==other_hand.hand_value
             # cards should already be sorted
             return compare_high(other_hand) if @hand_value==4 || @hand_value==5 || @hand_value==9 || @hand_value==1
-            
-        elsif @hand_value>other_hand.hand_value
+            return compare_four_of_a_kind(other_hand) if @hand_value==2
+            return compare_full_house(other_hand) if @hand_value==3
+            return compare_pair_or_three_of_a_kind(other_hand) if @hand_value==6 || @hand_value==8
+            return compare_two_pair(other_hand) if @hand_value==7
+        elsif @hand_value<other_hand.hand_value
             return 1
         else return -1
         end
@@ -120,12 +123,84 @@ class Hand
 # works for flush, high card, straight, and straight flush
     def compare_high(other_hand)
          (0..4).each do |idx|
-                if @hand[-1-idx].rank>other_hand[-1-idx].rank
+                if @hand[-1-idx].rank>other_hand.hand[-1-idx].rank
                     return 1
-                elsif @hand[-1-idx].rank<other_hand[-1-idx].rank
+                elsif @hand[-1-idx].rank<other_hand.hand[-1-idx].rank
                     return -1
                 end
             end
+    end
+
+    def compare_four_of_a_kind(other_hand)
+        count=Hash.new(0)
+        other_hand_count=Hash.new(0)
+        @hand.each{|card| count[card.rank]+=1}
+        other_hand.hand.each{|card| other_hand_count[card.rank]+=1}
+        player_card=count.key(4) 
+        other_player_card=other_hand_count.key(4)
+        return compare_high(other_hand) if player_card==other_player_card
+        return 1 if player_card>other_player_card
+        -1
+    end
+
+    def compare_full_house(other_hand)
+        count=Hash.new(0)
+        other_hand_count=Hash.new(0)
+        @hand.each{|card| count[card.rank]+=1}
+        other_hand.hand.each{|card| other_hand_count[card.rank]+=1}
+        player_card=count.key(3) 
+        other_player_card=other_hand_count.key(3)
+        if player_card==other_player_card
+            second_player_card=count.key(2)
+            second_other_player_card=other_hand_count.key(2)
+            return 1 if second_player_card>second_other_player_card
+            return -1 if second_player_card<second_other_player_card
+            raise "draw method should've done this"
+        end
+       return 1 if player_card>other_player_card
+        -1
+    end
+
+    def compare_pair_or_three_of_a_kind(other_hand)
+        count=Hash.new(0)
+        other_hand_count=Hash.new(0)
+        @hand.each{|card| count[card.rank]+=1}
+        other_hand.hand.each{|card| other_hand_count[card.rank]+=1}
+        keyParam=3 if @hand_value==6
+        keyParam=2 if @hand_value==8
+        player_card=count.key(keyParam) 
+        other_player_card=other_hand_count.key(keyParam)
+        return 1 if player_card>other_player_card
+        return -1 if player_card<other_player_card
+        return compare_high if other_player_card==player_card
+    end
+
+
+    def compare_two_pair(other_hand)
+        count=Hash.new(0)
+        other_hand_count=Hash.new(0)
+        # changing sort order to retrieve highest pair
+        @hand.reverse!{|card| card.rank}
+        other_hand.hand.reverse!{|card| card.rank}
+        @hand.each{|card| count[card.rank]+=1}
+        other_hand.hand.each{|card| other_hand_count[card.rank]+=1}
+        player_card=count.key(2) 
+        other_player_card=other_hand_count.key(2)
+        if player_card==other_player_card
+            # reversing back to retreive the weaker second pair
+            @hand.reverse!{|card| card.rank}
+            other_hand.hand.reverse!{|card| card.rank}
+            second_player_card=count.key(2)
+            second_other_player_card=other_hand_count.key(2)
+            return 1 if second_player_card>second_other_player_card
+            return -1 if second_player_card<second_other_player_card
+            last_player_card=count.key(1)
+            last_other_player_card=other_hand_count.key(1)
+            return 1 if last_player_card>last_other_player_card
+            return -1
+        else return 1 if player_card>other_player_card
+        end
+        -1
     end
     
 

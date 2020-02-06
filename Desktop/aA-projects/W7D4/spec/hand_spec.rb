@@ -33,7 +33,7 @@ describe "Hand" do
         Card.new("4","♣"),
         Card.new("2","♠"),
         Card.new("3","♠")])}
-        let(:straight_flush){Hand.new([Card.new("6","♠"),
+        let(:straight_flush){Hand.new([Card.new("A","♠"),
         Card.new("5","♠"),
         Card.new("4","♠"),
         Card.new("2","♠"),
@@ -112,7 +112,7 @@ describe "Hand" do
         Card.new("4","♣"),
         Card.new("2","♠"),
         Card.new("3","♠")])}
-        let(:straight_flush2){Hand.new([Card.new("A","♠"),
+        let(:straight_flush2){Hand.new([Card.new("6","♠"),
         Card.new("5","♠"),
         Card.new("4","♠"),
         Card.new("2","♠"),
@@ -172,14 +172,14 @@ describe "Hand" do
             end
 
             it "should know the loser if two cards have the same rank" do
-                     expect(pair.compare_hand(pair2)).to eq(-1)
-                    expect(flush.compare_hand(flush2)).to eq(-1)
-                    expect(straight_flush.compare_hand(straight_flush2)).to eq(-1)
-                    expect(two_pair.compare_hand(two_pair2)).to eq(-1)
-                    expect(three_of_a_kind.compare_hand(three_of_a_kind2)).to eq(-1)
-                    expect(four_of_a_kind.compare_hand(four_of_a_kind2)).to eq(-1)
-                    expect(high_card.compare_hand(high_card2)).to eq(-1)
-                    expect(full_house.compare_hand(full_house2)).to eq(-1)
+                     expect(pair2.compare_hand(pair)).to eq(-1)
+                    expect(flush2.compare_hand(flush)).to eq(-1)
+                    expect(straight_flush2.compare_hand(straight_flush)).to eq(-1)
+                    expect(two_pair2.compare_hand(two_pair)).to eq(-1)
+                    expect(three_of_a_kind2.compare_hand(three_of_a_kind)).to eq(-1)
+                    expect(four_of_a_kind2.compare_hand(four_of_a_kind)).to eq(-1)
+                    expect(high_card2.compare_hand(high_card)).to eq(-1)
+                    expect(full_house2.compare_hand(full_house)).to eq(-1)
             end
                    let(:pair3){Hand.new([Card.new("A","♦"), Card.new("A","♣"),
                     Card.new("7","♣"),

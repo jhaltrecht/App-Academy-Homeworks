@@ -1,5 +1,7 @@
 require_relative "deck"
+require_relative "card"
 require_relative "player"
+require_relative "hand"
 class Game
     attr_reader :deck,:players,:total,:pot
     def initialize
@@ -14,17 +16,20 @@ class Game
     def begin_game
         add_players
         until game_over?
-            deck_temp=@deck.shuffle
+            deck_temp=@deck.shuffle!
             @players.each do |player|
             puts "#{player.name}'s turn'"
-            player.hand=Hand.new(deck_temp.slice!(0,4))
+            player.hand=Hand.new(deck_temp.slice!(0,5))
+            player.hand.render
             player.make_move
             end
             @players.each do |player|
-            puts "#{player.name}'s turn'"
-            count=player.swap_move
-            count.times do 
-                card=deck_temp.shift!
+                puts "#{player.name}'s turn'"
+                p player.hand
+                count=player.swap_move
+                count.times do 
+                    card=deck_temp.shift!
+                end
             end
             @players.each do |player|
                  puts "#{player.name}'s turn'"
@@ -38,9 +43,11 @@ class Game
     end
 
     def add_players
+        player_count=20
+        until player_count.between?(0,8)
         puts "how many players do you want to add"
         player_count=gets.chomp.to_i
-        raise "invalid number" unless player_count.between?(0,8)
+        end
         player_count.times do 
             puts "enter a name for the player"
             player_name=gets.chomp
@@ -81,4 +88,9 @@ class Game
         end
         false
     end
+end
+
+
+if __FILE__ == $PROGRAM_NAME
+  Game.new.begin_game
 end

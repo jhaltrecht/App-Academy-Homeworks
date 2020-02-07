@@ -11,11 +11,11 @@ describe "Player" do
 
     describe "#make_move" do 
     it "should assume the player chooses valid cards to discard" do 
-        expect{card}.to raise_
+        # expect{card}.to raise_
     end
 
     it "should tell the player to choose again if the choice is not valid" do
-         expect{}
+        #  expect{}
     end
 
 end

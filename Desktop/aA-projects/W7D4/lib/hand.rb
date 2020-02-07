@@ -10,6 +10,12 @@ class Hand
         calculate_hand
     end
 
+    def render
+        @hand.each do |card|
+            puts "#{card.value} #{card.suit}"
+        end
+    end
+
     def calculate_hand
 
         return @hand_value=1 if is_a_flush? && is_a_straight?

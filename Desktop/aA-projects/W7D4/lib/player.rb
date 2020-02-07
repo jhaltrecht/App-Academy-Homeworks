@@ -1,5 +1,6 @@
 class Player
-    attr_reader :name,:hand
+    attr_reader :name,:stack
+    attr_accessor :hand
     def initialize(name)
         @name=name
         @stack=500
@@ -7,21 +8,21 @@ class Player
 
     def make_move
         move='z'
-        unless move=='f'||move=='c'||move=='r'
+        until move=='f'||move=='c'||move=='r'
             puts "Do you wish to fold, call, or raise. 'f' to fold, 'c' to call,'r' to raise"
             move=gets.chomp
-            break if move=='f'|| break if move=='c' || break if move=='r'
+            break if move=='f'|| move=='c' || move=='r'
             puts "invalid action" unless move=='c' && move=='r' && move=='f'
         end
         fold if move=='f' 
         call if move=='c' 
-        raise if move=='r' 
+        self.raise if move=='r' 
     end
 
     def swap_move
          pos=0
         discard_count=0
-        unless pos=="s"
+        until pos=="s"
             puts " Enter a position of a card to discard: or 's' to skip "
             break if pos=='s'
             pos=pos.to_i

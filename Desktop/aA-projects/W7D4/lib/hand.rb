@@ -48,7 +48,7 @@ class Hand
         raise "invalid position" unless pos.between?(0,4)
         raise "you can't discard more than 5 cards" if @hand.length==0
         # add to end of deck
-        @discard_pile<<@hand.slice!(pos)
+        @hand.slice!(pos)
      end 
 
      def add(card)

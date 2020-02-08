@@ -40,6 +40,7 @@ def merge(left_arr,right_arr)
      sortedArr+left_arr+right_arr
 end
 
+# fishArr=['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh', 'fiiiissshhhhhh']
 
 # Find the longest fish in O(n) time. 
 # The octopus can hold on to the longest fish that you have found so far
@@ -52,13 +53,30 @@ def clever_octupus(fishArr)
     maxElement
 end
 
-Given a tile direction, iterate through a tiles array to return the tentacle number (tile index) the octopus must move. This should take O(n) time.
+# Given a tile direction, iterate through a tiles array to return the tentacle number (tile index) the octopus must move. This should take O(n) time.
 
 
-def slow_dance
+def slow_dance(direction,tiles_array)
+    tiles_array.each_with_index { |tile,idx| return idx if tile==direction}
+    nil
+end
+# new function so that you can access the tentacle number in O(1) time.
+def fast_dance(direction,tiles_hash)
+    tiles_hash[direction]
+end
+# changed it to tiles hash
+tiles_hash = {
+    "up" => 0,
+    "right-up" => 1,
+    "right"=> 2,
+    "right-down" => 3,
+    "down" => 4,
+    "left-down" => 5,
+    "left" => 6,
+    "left-up" => 7
+}
+tiles_array = ["up", "right-up", "right", "right-down", "down", "left-down", "left",  "left-up" ]
+p fast_dance("up", tiles_hash)
 
-fishArr=['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh', 'fiiiissshhhhhh']
-p slow_dance("up", tiles_array)
 
-
-p slow_dance("right-down", tiles_array)
+p fast_dance("right-down", tiles_hash)

@@ -65,5 +65,16 @@ end
 #  This time, use two Hashes to store the number of times each letter appears
 #   in both words. Compare the resulting hashes.
 
+def fourth_anagram?(word,word2)
+    word_hash=Hash.new(0)
+    word2_hash=Hash.new(0)
+    word.each_char {|char|word_hash[char]+=1}
+    word2.each_char {|char|word2_hash[char]+=1}
+    word_hash==word2_hash
+
+
+
+end
+
 p fourth_anagram?("gizmo", "sally")    #=> false
  p fourth_anagram?("elvis", "lives")    #=> true

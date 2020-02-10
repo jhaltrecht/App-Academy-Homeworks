@@ -33,8 +33,15 @@ end
 # the second string is empty at the end of the iteration.
 
 def second_anagram?(word,word2)
-    word.each_char.with_index |letter,idx| do 
-        letter_index=word2.find_index(letter)
+    word.each_char do |letter| 
+        letter_index=word2.index(letter)
+        return false if letter_index.nil?
         word2.slice!(letter_index)
     end
+    return true if word2.empty?
+    false
 end
+
+
+p second_anagram?("gizmo", "sally")    #=> false
+ p second_anagram?("elvis", "lives")    #=> true

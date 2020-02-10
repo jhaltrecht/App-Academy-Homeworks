@@ -24,7 +24,7 @@ end
 
 
 # p first_anagram?("gizmo", "sally")    #=> false
-# # p first_anagram?("elvis", "lives")    #=> true
+# p first_anagram?("elvis", "lives")    #=> true
 
 # # Write a method #second_anagram? that iterates over the first string. 
 # For each letter in the first string, find the index of that letter in the second string 
@@ -43,5 +43,27 @@ def second_anagram?(word,word2)
 end
 
 
-p second_anagram?("gizmo", "sally")    #=> false
- p second_anagram?("elvis", "lives")    #=> true
+# p second_anagram?("gizmo", "sally")    #=> false
+#  p second_anagram?("elvis", "lives")    #=> true
+
+# #  Write a method #third_anagram? that solves the problem by sorting both strings 
+# alphabetically. The strings are then anagrams if and only if the sorted versions
+#  are the identical.
+
+def third_anagram?(word,word2)
+    sorted_word1=word.chars.sort
+    sorted_word2=word2.chars.sort
+    sorted_word2==sorted_word1
+end
+
+
+# p third_anagram?("gizmo", "sally")    #=> false
+#  p third_anagram?("elvis", "lives")    #=> true
+
+
+#  Write one more method #fourth_anagram?. 
+#  This time, use two Hashes to store the number of times each letter appears
+#   in both words. Compare the resulting hashes.
+
+p fourth_anagram?("gizmo", "sally")    #=> false
+ p fourth_anagram?("elvis", "lives")    #=> true

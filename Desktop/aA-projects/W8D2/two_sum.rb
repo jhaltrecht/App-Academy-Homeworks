@@ -25,6 +25,8 @@ def okay_two_sum?(arr,target_sum)
    end
 end
 
+
+
 def hash_sum?(arr,target_sum)
    hash={}
    arr.each do |el|

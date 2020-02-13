@@ -1,3 +1,5 @@
+require "byebug"
+
 class Node
   attr_reader :key
   attr_accessor :val, :next, :prev
@@ -16,11 +18,22 @@ class Node
   def remove
     # optional but useful, connects previous link to next link
     # and removes self from list.
-  end
+      prev_node=self.prev
+      next_node=self.next
+      next_node.prev=prev_node 
+       prev_node.next=next_node
+        self.prev=nil
+        self.next=nil
+    end
 end
 
 class LinkedList
+  include Enumerable
   def initialize
+    @head=Node.new
+    @tail=Node.new
+    @head.next=@tail
+    @tail.prev=@head
   end
 
   def [](i)
@@ -29,34 +42,67 @@ class LinkedList
   end
 
   def first
+    @head.next
   end
 
   def last
+    @tail.prev
   end
 
   def empty?
+     @head.next==@tail
   end
 
   def get(key)
+    self.each do |node|
+      return node.val if node.key==key
+    end
+    nil
   end
 
   def include?(key)
+     self.each do |node|
+      return true if node.key==key
+    end
+    false
   end
 
   def append(key, val)
+    new_node=Node.new(key,val)
+    prev_node=@tail.prev
+    new_node.prev=prev_node
+    prev_node.next=new_node
+    new_node.next=@tail
+    @tail.prev=new_node
   end
 
   def update(key, val)
+    self.each  {|node| node.val=val if node.key==key }
   end
 
   def remove(key)
+    self.each do |node| 
+      debugger
+      if node.key==key 
+        node.remove 
+        return
+      end
+    end
+
   end
 
+
+
   def each
+    next_node=@head.next
+    until next_node==@tail
+          yield next_node
+          next_node=next_node.next
+    end
   end
 
   # uncomment when you have `each` working and `Enumerable` included
-  # def to_s
-  #   inject([]) { |acc, link| acc << "[#{link.key}, #{link.val}]" }.join(", ")
-  # end
+  def to_s
+    inject([]) { |acc, link| acc << "[#{link.key}, #{link.val}]" }.join(", ")
+  end
 end

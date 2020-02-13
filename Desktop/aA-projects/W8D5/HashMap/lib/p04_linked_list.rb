@@ -42,11 +42,11 @@ class LinkedList
   end
 
   def first
-    @head.next
+    @head.next if !empty?
   end
 
   def last
-    @tail.prev
+    @tail.prev if !empty?
   end
 
   def empty?

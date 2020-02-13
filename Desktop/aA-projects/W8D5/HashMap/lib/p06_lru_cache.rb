@@ -2,7 +2,10 @@ require_relative 'p05_hash_map'
 require_relative 'p04_linked_list'
 require 'byebug'
 
+
 class LRUCache
+    attr_reader :max, :prc
+
   def initialize(max, prc)
     @map = HashMap.new
     @store = LinkedList.new
@@ -15,43 +18,43 @@ class LRUCache
   end
 
   def get(key)
-    @map.each do |node|
-      if node.key==key
-        # exists in cache, move node pos to end.
-       update_node!(node)
-        return node.value
-      else 
-        val=@prc.call(key)
-        @store.append(key,val)
-        #  add the key to your hash, along with a pointer to the new node.
-        @map[key]=node
-        eject! if count>@max
-      end
+          
+    if @map[key]
+          node=@map[key]
+          update_node!(node)
+          node.val
+    else calc!(key)
     end
-
-
   end
+  # end
+
+
+
 
   def to_s
     'Map: ' + @map.to_s + '\n' + 'Store: ' + @store.to_s
   end
 
   private
+  attr_reader :store, :map
 
   def calc!(key)
-    # prc.call(key)
+    val=@prc.call(key)
+        #  add the key to your hash, along with a pointer to the new node.
+        @map[key]=@store.append(key,val)
+        eject! if count>@max
+        val
     # suggested helper method; insert an (un-cached) key
   end
-    # suggested helper method; move a node to the end of the list
 
   def update_node!(node)
-      @store.delete(node.key)
+      @store.remove(node.key)
        @map[node.key]=@store.append(node.key,node.val)
   end
 
   def eject!
     first_key=@store.first.key
-    remove(first_key)
+    @store.remove(first_key)
     @map.delete(first_key) 
   end
 end

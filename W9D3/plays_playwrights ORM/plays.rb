@@ -50,14 +50,16 @@ class Play
   end
 
   def find_by_title(title)
-      PlayDBConnection.instance.execute(<<-SQL,title)
+      play=PlayDBConnection.instance.execute(<<-SQL,title)
      SELECT 
       *
      FROM 
       plays
       WHERE
       self.title=?
-    SQL
+      return nil if play.length==0
+      SQL
+      Play.new(play.first)
 
   end
 # returns all plays written by a playwright
@@ -65,9 +67,8 @@ class Play
     # get name and year of playwright
      playwright=Playwright.find_by_name(name)
     #  confirm that name is valid
-     raise "invalid name" unless 
-     playwright
-    PlayDBConnection.instance.execute(<<-SQL,playwright)
+     raise "invalid name" unless playwright
+    plays=PlayDBConnection.instance.execute(<<-SQL,playwright)
      SELECT 
       * 
      FROM 
@@ -81,6 +82,7 @@ class Play
 end
 
 class Playwright
+  attr_accessor :id, :name, :birth_year
   def self.all
     data = PlayDBConnection.instance.execute("SELECT * FROM playwrights")
     data.map { |datum| Playwright.new(datum) }
@@ -93,13 +95,15 @@ class Playwright
   end
 
   def find_by_name(name)
-   PlayDBConnection.instance.execute(<<-SQL,name)
+   writer=PlayDBConnection.instance.execute(<<-SQL,name)
      SELECT 
       * 
      FROM 
       playwrights
      WHERE
      playwrights.name=?
+     return nil if writer.length==0
+     Playwright.new(writer.first)
     SQL
   end
 
@@ -126,7 +130,7 @@ class Playwright
   end
   # return all plays written by playwright
   def get_plays
-    PlayDBConnection.instance.execute(<<-SQL, self.id)
+    plays=PlayDBConnection.instance.execute(<<-SQL, self.id)
       SELECT
         *
       FROM

@@ -60,10 +60,13 @@ class Play
     SQL
 
   end
-# returns all plays written by playwright
+# returns all plays written by a playwright
   def find_by_playwright(name)
     # get name and year of playwright
      playwright=Playwright.find_by_name(name)
+    #  confirm that name is valid
+     raise "invalid name" unless 
+     playwright
     PlayDBConnection.instance.execute(<<-SQL,playwright)
      SELECT 
       * 
@@ -71,8 +74,8 @@ class Play
       plays
      WHERE
      playwright_id=playwright.id
-     
     SQL
+        plays.map { |play| Play.new(play) }
   end
 
 end
@@ -101,13 +104,39 @@ class Playwright
   end
 
   def create
-
+    raise "#{self} already in database" if self.id
+    PlayDBConnection.instance.execute(<<-SQL, self.name,self.birth_year)
+      INSERT INTO
+        playwrights (name,birth_year)
+      VALUES
+        (?, ?)
+    SQL
+    self.id = PlayDBConnection.instance.last_insert_row_id
   end
   def update
+    raise "#{self} not in database" unless self.id
+    PlayDBConnection.instance.execute(<<-SQL, self.name,self.birth_year,self.id)
+      UPDATE
+        playwrights
+      SET
+        name = ?, birth_year = ?
+      WHERE
+        id = ?
+    SQL
   end
   # return all plays written by playwright
   def get_plays
-    
+    PlayDBConnection.instance.execute(<<-SQL, self.id)
+      SELECT
+        *
+      FROM
+       plays
+      WHERE
+      playwright_id=?
+    SQL
+        plays.map { |play| Play.new(play) }
+
+
   end
 
 

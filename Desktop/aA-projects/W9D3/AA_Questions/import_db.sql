@@ -5,7 +5,6 @@ DROP TABLE IF EXISTS questions;
 DROP TABLE IF EXISTS users;
 PRAGMA foreign_keys= ON;
 
-
 CREATE TABLE users(
     id INTEGER PRIMARY KEY,
     fname TEXT,

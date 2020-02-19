@@ -1,4 +1,4 @@
-require_relative "questions_database"
+ require_relative "questions_database"
 class Users
     attr_accessor :id,:fname,:lname
     def self.all
@@ -24,6 +24,10 @@ class Users
         SQL
         return nil unless user.length>0
         Users.new(user.first)
+    end
+
+    def find_by_name(fname, lname)
+
     end
 
 end

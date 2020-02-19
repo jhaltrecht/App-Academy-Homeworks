@@ -27,5 +27,44 @@ class Replies
         return nil unless reply.length>0
         Replies.new(reply.first)
     end
+    # used to find info on replies table
+    # def self.find_by_user_id(user_id)
+    #      user=USERS.find_by_id(user_id)
+    #     raise "#{user_id} not found in DB" unless user
+    #     user_info=QuestionsDatabase.instance.execute(<<-SQL,user.id)
+    #     SELECT 
+    #         *
+    #     FROM
+    #         replies
+    #     WHERE 
+    #         user_id=?
+    #     user_info.map{|info| User.new(info)}
+    # end
+    # end
 
+    def self.find_by_user_id(user_id)
+    replies_data = QuestionsDatabase.execute(<<-SQL, user_id)
+      SELECT
+        *
+      FROM
+        replies
+      WHERE
+        user_id = ?
+    SQL
+
+    replies_data.map { |reply_data| Reply.new(reply_data) }
+  end
 end
+
+def self.find_by_question_id(question_id)
+   replies_data = QuestionsDatabase.execute(<<-SQL, question_id)
+     SELECT
+       *
+     FROM
+       replies
+     WHERE
+       question_id = ?
+   SQL
+
+   replies_data.map { |reply_data| Reply.new(reply_data) }
+ end

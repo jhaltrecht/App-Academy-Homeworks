@@ -28,19 +28,46 @@ class Questions
         return nil unless quest.length>0
         Questions.new(quest.first)
     end
+    # used to find  info on user table
+    # def self.find_by_author_id(author_id)
+    #     # returns user instance and checks if id is valid
+    #     author=USERS.find_by_id(author_id)
+    #     raise "#{author_id} not found in DB" unless author
+    #     user_questions=QuestionsDatabase.instance.execute(<<-SQL,author.id)
+    #     SELECT 
+    #         *
+    #     FROM
+    #         questions
+    #     WHERE 
+    #         author_id=?
+    #     user_questions.map{|quest| User.new(quest)}
+    # end
 
-    def find_by_author_id(author_id)
-        # returns user instance
-        author=USERS.find_by_id(author_id)
-        raise "#{author_id} not found in DB" unless author
-        user_questions=QuestionsDatabase.instance.execute(<<-SQL,author.id)
-        SELECT 
-            *
-        FROM
-            questions
-        WHERE 
-            author_id=?
-        user_questions.map{|quest| User.new(quest)}
-    end
 
+  def self.find_by_author_id(author_id)
+    questions_data = QuestionsDatabase.execute(<<-SQL, author_id: author_id)
+      SELECT
+        questions.*
+      FROM
+        questions
+      WHERE
+        questions.author_id = :author_id
+    SQL
+
+    questions_data.map { |question_data| Question.new(question_data) }
+  end
+
+
+  def self.find_by_author_id(author_id)
+    questions_data = QuestionsDatabase.execute(<<-SQL,author_id)
+      SELECT
+       *
+      FROM
+        questions
+      WHERE
+        author_id = ?
+    SQL
+    raise 'invalid id' unless question_data.length>0
+    questions_data.map { |question_data| Question.new(question_data) }
+  end
 end

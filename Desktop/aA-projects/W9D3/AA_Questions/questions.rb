@@ -66,5 +66,9 @@ class Questions
     Replies.find_by_question_id(id)
   end
 
+  def followers
+    Questions_follows.followers_for_question_id(id)
+  end
+
 
 end

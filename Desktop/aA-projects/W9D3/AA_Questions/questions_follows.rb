@@ -1,4 +1,5 @@
 require_relative "questions_database"
+require_relative "users"
 class Questions_follows
     attr_accessor :id,:question_id,:author_id
     def self.all
@@ -22,20 +23,48 @@ class Questions_follows
         WHERE 
             id=?
         SQL
-        return nil unless quest_follow.length>0
+        raise "invalid id" unless quest_follow.length>0
         Questions_follows.new(quest_follow.first)
     end
 
-    def followers_for_question_id(question_id)
-        # questions
-        # # @id = options['id']
-        # @title = options['title']
-        # @body = options['body']
-        # # @author_id = options['author_id']
+    def self.followers_for_question_id(question_id)
+        # USERS
+        # @id = options['id']
+        # @fname = options['fname']
+        # @lname = options['lname']
+
         quest_follow=QuestionsDatabase.instance.execute(<<-SQL,question_id)
         SELECT 
             *
         FROM 
+            users
+        JOIN
+            questions_follows on author_id=users.id
+        WHERE 
+            questions_follows.question_id=?
+        SQL
+        raise "invalid question id" unless quest_follow.length>0
+        quest_follow.map{|quest| Users.new(quest)}
+    end
+
+    def self.followed_questions_for_user_id(author_id)
+    #    QUESTIONS
+    #     @id = options['id']
+    #     @title = options['title']
+    #     @body = options['body']
+    #     @author_id = options['author_id']
+         quest_follow=QuestionsDatabase.instance.execute(<<-SQL,author_id)
+        SELECT 
+            *
+        FROM 
+            questions
+        JOIN
+            questions_follows on question_id=questions.id
+        WHERE 
+            questions_follows.author_id=?
+        SQL
+        raise "invalid question id" unless quest_follow.length>0
+        quest_follow.map{|quest| Questions.new(quest)}
     end
 
 

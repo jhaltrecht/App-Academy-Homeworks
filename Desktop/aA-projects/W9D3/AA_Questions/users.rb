@@ -1,4 +1,5 @@
  require_relative "questions_database"
+ require_relative 'questions_follows'
  require_relative 'questions'
  require_relative 'replies'
 class Users
@@ -49,6 +50,9 @@ class Users
             Replies.find_by_user_id(id)
     end
         
+    def followed_questions
+        Questions_follows.followed_questions_for_user_id(id)
+    end
     
 
 end

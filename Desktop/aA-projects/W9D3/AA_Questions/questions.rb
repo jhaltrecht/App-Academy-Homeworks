@@ -70,5 +70,16 @@ class Questions
     Questions_follows.followers_for_question_id(id)
   end
 
+  def most_followed(n)
+    Questions_follows.most_followed_questions(n)
+  end
+
+  def likers
+    Questions_likes.likers_for_question_id(id)
+  end
+
+  def num_likes
+    Questions_likes.num_likes_for_question_id(id)
+  end
 
 end

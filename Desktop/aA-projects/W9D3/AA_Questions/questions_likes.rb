@@ -23,7 +23,57 @@ class Questions_likes
             id=?
         SQL
         return nil unless quest_like.length>0
-        Questions_likes.new(quest_like.first)
+        quest_like.map{|quest|Questions_likes.new(quest)}
     end
+
+    def self.likers_for_question_id(question_id)
+         # USERS
+        # @id = options['id']
+        # @fname = options['fname']
+        # @lname = options['lname']
+        quest_like=QuestionsDatabase.instance.execute(<<-SQL,question_id)
+        SELECT 
+            *
+        FROM
+            Questions_likes
+        JOIN 
+            users on users.id=quest_like.author_id
+        WHERE 
+            question_id=?
+        SQL
+        return nil unless quest_like.length>0
+        quest_like.map{|quest|Questions_likes.new(quest)}
+    end
+
+    def self.num_likes_for_question_id(question_id)
+        quest_like=QuestionsDatabase.instance.execute(<<-SQL,question_id)
+        SELECT 
+            count(*) as likes
+        FROM
+            questions_likes
+        JOIN 
+            questions on question.id=questions_likes.question_id
+        WHERE 
+            question_id=?
+        SQL
+        return "invalid question id" unless quest_like.length>0
+        quest_like.map{|quest|Questions_likes.new(quest)}
+    end
+
+    def self.liked_questions_for_user_id(author_id)
+        quest_like=QuestionsDatabase.instance.execute(<<-SQL,author_id)
+        SELECT 
+            *
+        FROM
+            questions_likes
+        JOIN 
+            questions on question.id=questions_likes.question_id
+        WHERE 
+            author_id=?
+        SQL
+        raise "invalid question id" unless quest_like.length>0
+        quest_like.map{|quest|Questions_likes.new(quest)}
+    end
+
 
 end

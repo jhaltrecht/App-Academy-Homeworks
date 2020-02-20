@@ -67,5 +67,23 @@ class Questions_follows
         quest_follow.map{|quest| Questions.new(quest)}
     end
 
+    self.most_followed_questions(n)
+         quest_follow=QuestionsDatabase.instance.execute(<<-SQL,n)
+        SELECT 
+            *
+        FROM 
+            questions
+        JOIN
+            questions_follows on question_id=questions.id
+        GROUP BY
+            questions.id
+        ORDER BY 
+           count(*) DESC
+        LIMIT 
+            n
+        SQL
+        raise "invalid question id" unless quest_follow.length>0
+        quest_follow.map{|quest| Questions.new(quest)}
+
 
 end

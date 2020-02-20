@@ -57,15 +57,55 @@ class Users
     def liked_questions
         Questions_likes.liked_questions_for_user_id(id)
     end
-
+# Avg number of likes for a User's questions.
     def average_karma
+        # QUESTIONS
+        #   @id = options['id']
+        # @title = options['title']
+        # @body = options['body']
+        # @author_id = options['author_id']
+
+        # Questions_likes
+        #  @id = options['id']
+        # @question_id = options['question_id']
+        # @author_id = options['author_id']
+
         user=QuestionsDatabase.instance.execute(<<-SQL,id)
         SELECT
-            *
+            CAST(COUNT(question_likes.id) as FLOAT)/COUNT(distinct(questions.id)) as average_karma
         FROM 
-            question_likes
-        JOIN 
-            questions on question.id=questions_likes.question_id
+            questions
+        LEFT JOIN 
+            questions_likes 
+        ON question.id=questions_likes.question_id
+        WHERE 
+            questions.author_id=?
+        SQL
+        raise 'invalid id' if user.length==0
+         Users.new(user.first)
     end
+
+
+  def save
+    update if @id
+    QuestionsDatabase.instance.execute(<<-SQL, @fname, @lname)
+      INSERT INTO
+        users (fname, lname)
+      VALUES
+        (?, ?)
+    SQL
+    @id = QuestionsDatabase.instance.last_insert_row_id
+  end
+
+  def update
+    QuestionsDatabase.instance.execute(<<-SQL, @fname, @lname, @id)
+      UPDATE
+        users
+      SET
+        fname = ?, lname = ?
+      WHERE
+        id = ?
+    SQL
+  end
 
 end

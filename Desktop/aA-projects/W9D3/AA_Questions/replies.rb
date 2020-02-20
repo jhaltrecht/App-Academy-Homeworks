@@ -104,4 +104,27 @@ class Replies
     raise 'invalid id' unless replies_data.length>0
     replies_data.map { |reply_data| Replies.new(reply_data) }
     end
+
+
+  def save
+    update if @id
+    QuestionsDatabase.instance.execute(<<-SQL,@question_id,@parent_reply_id,@author_id,@body)
+      INSERT INTO
+        replies (question_id,parent_reply_id,author_id,body)
+      VALUES
+        (?,?,?,?)
+    SQL
+    @id = QuestionsDatabase.instance.last_insert_row_id
+  end
+
+  def update
+    QuestionsDatabase.instance.execute(<<-SQL,@question_id,@parent_reply_id,@author_id,@body,@id)
+      UPDATE
+        replies
+      SET
+        @question_id=?,@parent_reply_id=?,@author_id=?,@body=?
+       WHERE
+        id = ?
+    SQL
+  end
 end

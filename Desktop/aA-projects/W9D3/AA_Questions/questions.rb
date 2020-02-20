@@ -11,7 +11,7 @@ class Questions
         @id = options['id']
         @title = options['title']
         @body = options['body']
-        @authors_id = options['authors_id']
+        @author_id = options['author_id']
     end
 # will lookup an id in the table, and return an object representing that row. 
 # return an instance of our Question class NOT the data hash returned by the QuestionsDatabase!
@@ -44,22 +44,9 @@ class Questions
     # end
 
 
-  def self.find_by_author_id(author_id)
-    questions_data = QuestionsDatabase.execute(<<-SQL, author_id: author_id)
-      SELECT
-        questions.*
-      FROM
-        questions
-      WHERE
-        questions.author_id = :author_id
-    SQL
-
-    questions_data.map { |question_data| Question.new(question_data) }
-  end
-
 
   def self.find_by_author_id(author_id)
-    questions_data = QuestionsDatabase.execute(<<-SQL,author_id)
+    questions_data = QuestionsDatabase.instance.execute(<<-SQL,author_id)
       SELECT
        *
       FROM
@@ -67,7 +54,17 @@ class Questions
       WHERE
         author_id = ?
     SQL
-    raise 'invalid id' unless question_data.length>0
-    questions_data.map { |question_data| Question.new(question_data) }
+    raise 'invalid id' unless questions_data.length>0
+    questions_data.map { |question_data| Questions.new(question_data) }
   end
+
+  def author
+    Users.find_by_id(author_id)
+  end
+
+  def replies
+    Replies.find_by_question_id(id)
+  end
+
+
 end

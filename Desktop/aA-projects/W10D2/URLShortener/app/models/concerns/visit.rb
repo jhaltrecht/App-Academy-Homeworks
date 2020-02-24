@@ -8,6 +8,15 @@ class Visit<ApplicationRecord
              )
     end
 
+    belongs_to :user,
+    class_name: 'User',
+    foreign_key: :user_id,
+    primary_key: :id
+
+    belongs_to :shortened_url,
+    class_name: "ShortenedUrl",
+    foreign_key: :shortened_url_id,
+    primary_key: :id
 
 
 

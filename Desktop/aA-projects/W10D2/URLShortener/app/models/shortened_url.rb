@@ -4,7 +4,7 @@ class ShortenedUrl<ApplicationRecord
 
     def self.random_code
         new_short_url=SecureRandom.urlsafe_base64
-            until !ShortenedURL.exists?(short_url: new_short_url)
+            until !ShortenedUrl.exists?(short_url: new_short_url)
                 new_short_url=SecureRandom.urlsafe_base64
             end
              new_short_url
@@ -16,5 +16,10 @@ class ShortenedUrl<ApplicationRecord
         submitted_user_id: user.id
         )
     end
+    belongs_to :submitter,
+    class_name: 'User',
+    foreign_key: :submitted_user_id,
+    primary_key: :id
+
 end
 

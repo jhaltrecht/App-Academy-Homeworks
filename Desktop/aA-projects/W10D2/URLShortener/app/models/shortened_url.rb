@@ -50,7 +50,16 @@ class ShortenedUrl<ApplicationRecord
         .distinct
         .count
     end
+    # prevent users from submitting more than 5 URLs in a single minute
 
+    def no_spamming
+        submit_count=ShortenedUrl.select('COUNT(submitted_user_id)'.where('created_at<?',1.minute.ago)
+        errors[:max]<<'too many urls submitted' if submit_count>=5
+    end
+#  limiting the number of total URLs non-premium users can submit to 5.
+    def nonpremium_max
+
+    end
 
 end
 

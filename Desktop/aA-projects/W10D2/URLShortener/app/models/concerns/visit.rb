@@ -1,14 +1,11 @@
 class Visit<ApplicationRecord
-    validates :shortened_url_id, :user_id, presence: true
+    validates :shortened_url, :visitor, presence: true
 # will create a Visit object recording a visit from a User to the given ShortenedUrl.
     def self.record_visit!(user,shortened_url)
-        Visit.create!(
-            user_id: user.id
-            shortened_url_id: shortened_url.id
-             )
+        Visit.create!(user_id: user.id,shortened_url_id: shortened_url.id)
     end
 
-    belongs_to :user,
+    belongs_to :visitor,
     class_name: 'User',
     foreign_key: :user_id,
     primary_key: :id

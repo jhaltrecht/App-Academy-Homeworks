@@ -4049,3 +4049,146 @@ Migrating to CreateResponses (20200227232829)
   [1m[36mAnswerChoice Load (0.4ms)[0m  [1m[34mSELECT "answer_choices".* FROM "answer_choices"[0m
   [1m[36mAnswerChoice Load (0.5ms)[0m  [1m[34mSELECT "answer_choices".* FROM "answer_choices"[0m
   [1m[36mAnswerChoice Load (0.4ms)[0m  [1m[34mSELECT  "answer_choices".* FROM "answer_choices" ORDER BY "answer_choices"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAnswerChoice Load (1.6ms)[0m  [1m[34mSELECT COUNT(responses.id) FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAnswerChoice Load (4.5ms)[0m  [1m[34m        SELECT
+            answer_choices.*,COUNT(responses.id) as Response_Count
+        FROM 
+            answer_choices
+        LEFT JOIN responses
+            on answer_choices.id=responses.answer_choice_id
+        WHERE 
+            answer_choices.question_id=3
+        GROUP BY
+            answer_choice.id
+[0m
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAnswerChoice Load (2.0ms)[0m  [1m[34m        SELECT
+            answer_choices.*,COUNT(responses.id) as Response_Count
+        FROM 
+            answer_choices
+        LEFT JOIN responses
+            on answer_choices.id=responses.answer_choice_id
+        WHERE 
+            answer_choices.question_id=3
+        GROUP BY
+            answer_choices.id
+[0m
+  [1m[36mAnswerChoice Load (0.8ms)[0m  [1m[34mSELECT COUNT(responses.id) FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAnswerChoice Load (1.4ms)[0m  [1m[34mSELECT COUNT(responses.id) FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (0.7ms)[0m  [1m[34mSELECT COUNT(responses.id) FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (0.7ms)[0m  [1m[34mSELECT COUNT(responses.id) FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (0.7ms)[0m  [1m[34mSELECT COUNT(responses.id) FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (0.7ms)[0m  [1m[34mSELECT COUNT(responses.id) FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (0.7ms)[0m  [1m[34mSELECT COUNT(responses.id) FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (0.7ms)[0m  [1m[34mSELECT COUNT(responses.id) FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAnswerChoice Load (1.7ms)[0m  [1m[34m        SELECT
+            answer_choices.*,COUNT(responses.id) as response_count
+        FROM 
+            answer_choices
+        LEFT JOIN responses
+            on answer_choices.id=responses.answer_choice_id
+        WHERE 
+            answer_choices.question_id=3
+        GROUP BY
+            answer_choices.id
+[0m
+  [1m[36mAnswerChoice Load (2.3ms)[0m  [1m[34mSELECT answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id='self.id') GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (1.4ms)[0m  [1m[34mSELECT  answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id='self.id') GROUP BY answer_choices.id LIMIT $2[0m  [["question_id", 3], ["LIMIT", 11]]
+  [1m[36mAnswerChoice Load (1.7ms)[0m  [1m[34mSELECT answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id='self.id') GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (0.8ms)[0m  [1m[34mSELECT  answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id='self.id') GROUP BY answer_choices.id LIMIT $2[0m  [["question_id", 3], ["LIMIT", 11]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAnswerChoice Load (1.5ms)[0m  [1m[34mSELECT answer_choices.text, COUNT(responses.id) AS num_responses FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (1.0ms)[0m  [1m[34m        SELECT
+            answer_choices.*,COUNT(responses.id) as response_count
+        FROM 
+            answer_choices
+        LEFT JOIN responses
+            on answer_choices.id=responses.answer_choice_id
+        WHERE 
+            answer_choices.question_id=3
+        GROUP BY
+            answer_choices.id
+[0m
+  [1m[36mAnswerChoice Load (0.8ms)[0m  [1m[34mSELECT answer_choices.text, COUNT(responses.id) AS num_responses FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (0.8ms)[0m  [1m[34mSELECT answer_choices.text, COUNT(responses.id) AS num_responses FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAnswerChoice Load (1.5ms)[0m  [1m[34mSELECT answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id='self.id') GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (0.8ms)[0m  [1m[34mSELECT  answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id='self.id') GROUP BY answer_choices.id LIMIT $2[0m  [["question_id", 3], ["LIMIT", 11]]
+  [1m[36mAnswerChoice Load (1.8ms)[0m  [1m[34m        SELECT
+            answer_choices.*,COUNT(responses.id) as response_count
+        FROM 
+            answer_choices
+        LEFT JOIN responses
+            on answer_choices.id=responses.answer_choice_id
+        WHERE 
+            answer_choices.question_id=3
+        GROUP BY
+            answer_choices.id
+[0m
+  [1m[36mAnswerChoice Load (1.3ms)[0m  [1m[34mSELECT answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id='self.id') GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (1.6ms)[0m  [1m[34mSELECT  answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id='self.id') GROUP BY answer_choices.id LIMIT $2[0m  [["question_id", 3], ["LIMIT", 11]]
+  [1m[36mAnswerChoice Load (1.0ms)[0m  [1m[34mSELECT answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id='self.id') GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (0.8ms)[0m  [1m[34mSELECT  answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id='self.id') GROUP BY answer_choices.id LIMIT $2[0m  [["question_id", 3], ["LIMIT", 11]]
+  [1m[36mAnswerChoice Load (0.9ms)[0m  [1m[34mSELECT answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id='self.id') GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (1.1ms)[0m  [1m[34mSELECT  answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id='self.id') GROUP BY answer_choices.id LIMIT $2[0m  [["question_id", 3], ["LIMIT", 11]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAnswerChoice Load (1.6ms)[0m  [1m[34mSELECT answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id=3) GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (0.9ms)[0m  [1m[34mSELECT answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id=3) GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (1.0ms)[0m  [1m[34m        SELECT
+            answer_choices.*,COUNT(responses.id) as response_count
+        FROM 
+            answer_choices
+        LEFT JOIN responses
+            on answer_choices.id=responses.answer_choice_id
+        WHERE 
+            answer_choices.question_id=3
+        GROUP BY
+            answer_choices.id
+[0m
+  [1m[36mAnswerChoice Load (0.9ms)[0m  [1m[34mSELECT answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id=3) GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAnswerChoice Load (1.6ms)[0m  [1m[34mSELECT answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id=3) GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (1.0ms)[0m  [1m[34m        SELECT
+            answer_choices.*,COUNT(responses.id) as response_count
+        FROM 
+            answer_choices
+        LEFT JOIN responses
+            on answer_choices.id=responses.answer_choice_id
+        WHERE 
+            answer_choices.question_id=3
+        GROUP BY
+            answer_choices.id
+[0m
+  [1m[36mAnswerChoice Load (0.8ms)[0m  [1m[34mSELECT answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id=3) GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mAnswerChoice Load (0.8ms)[0m  [1m[34mSELECT answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id=3) GROUP BY answer_choices.id[0m  [["question_id", 3]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAnswerChoice Load (2.1ms)[0m  [1m[34m        SELECT
+            answer_choices.*,COUNT(responses.id) as response_count
+        FROM 
+            answer_choices
+        LEFT JOIN responses
+            on answer_choices.id=responses.answer_choice_id
+        WHERE 
+            answer_choices.question_id=3
+        GROUP BY
+            answer_choices.id
+[0m
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAnswerChoice Load (2.0ms)[0m  [1m[34m        SELECT
+            answer_choices.*,COUNT(responses.id) as response_count
+        FROM 
+            answer_choices
+        LEFT JOIN responses
+            on answer_choices.id=responses.answer_choice_id
+        WHERE 
+            answer_choices.question_id=3
+        GROUP BY
+            answer_choices.id
+[0m
+  [1m[36mAnswerChoice Load (0.8ms)[0m  [1m[34mSELECT answer_choices.text, COUNT(responses.id) AS response_count FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 AND (answer_choices.question_id=3) GROUP BY answer_choices.id[0m  [["question_id", 3]]

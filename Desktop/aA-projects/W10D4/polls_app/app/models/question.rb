@@ -34,10 +34,10 @@ class Question < ApplicationRecord
     end
 
     def results_SQL
-        Response.find_by_sql
-        ans_choice=AnswerChoice.find_by_sql([<<-SQL, id])
+       
+        ans_choices=AnswerChoice.find_by_sql([<<-SQL, id])
         SELECT
-            answer_choices.*,COUNT(responses.id) as Response_Count
+            answer_choices.*,COUNT(responses.id) as response_count
         FROM 
             answer_choices
         LEFT JOIN responses
@@ -45,12 +45,29 @@ class Question < ApplicationRecord
         WHERE 
             answer_choices.question_id=?
         GROUP BY
-            answer_choice.id
+            answer_choices.id
         SQL
+
+        choices_counts={}
+        ans_choices.each do |choice|
+            choices_counts[choice.text]=choice.response_count
+        end
+        choices_counts
+
     end
 
-    # sql query
-
+    def results_no_SQL
+       ans_choices=self.answer_choices
+       .select('answer_choices.text','COUNT(responses.id) AS response_count')
+       .left_outer_joins(:responses)
+       .where('answer_choices.question_id=?',self.id)
+       .group('answer_choices.id')
+        choices_counts={}
+        ans_choices.each do |choice|
+            choices_counts[choice.text]=choice.response_count
+        end
+        choices_counts
+    end
 
 
 

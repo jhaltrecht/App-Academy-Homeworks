@@ -12,7 +12,11 @@ class Question < ApplicationRecord
     foreign_key: :question_id,
     primary_key: :id
     
-    has_many :responses, through: :answer_choices, source: responses:
+    has_many :responses, through: :answer_choices, source: :responses
+# first with n+1 query
+    def results
+
+    end
 
 
 

@@ -121,9 +121,15 @@ class MetaCorgiSnacks
   #   result = "#{name.capitalize}: #{info}: #{tastiness} "
   #   tastiness > 30 ? "* #{result}" : result
   # end
-
+# uses ::define_method to dynamically build each of the snack methods (bone, kibble, and treat) on the CorgiSnacks class.
 
   def self.define_snack(name)
-    # Your code goes here...
+    define_method(name) {
+    info=@snack_box.send("get_#{name}_info",@box_id)
+    tastiness = @snack_box.send("get_#{name}_tastiness",@box_id)
+    result = "#{name.capitalize}: #{info}: #{tastiness} "
+    tastiness > 30 ? "* #{result}" : result
+  }
+
   end
 end

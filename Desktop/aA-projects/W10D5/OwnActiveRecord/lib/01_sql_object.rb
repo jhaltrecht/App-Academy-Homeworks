@@ -29,7 +29,6 @@ class SQLObject
 
   def self.table_name
     @table_name||=self.to_s.tableize
-    # ...
   end
 
   def self.all
@@ -115,4 +114,7 @@ class SQLObject
     end
 
   end
+
+
+  
 end

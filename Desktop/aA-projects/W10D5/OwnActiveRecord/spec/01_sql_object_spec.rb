@@ -1,6 +1,7 @@
 require '01_sql_object'
 require 'db_connection'
 require 'securerandom'
+require 'byebug'
 
 describe SQLObject do
   before(:each) { DBConnection.reset }
@@ -153,6 +154,7 @@ describe SQLObject do
 
         cats = Cat.parse_all(hashes)
         expect(cats.length).to eq(2)
+        # debugger
         hashes.each_index do |i|
           expect(cats[i].name).to eq(hashes[i][:name])
           expect(cats[i].owner_id).to eq(hashes[i][:owner_id])

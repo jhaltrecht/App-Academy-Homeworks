@@ -786,3 +786,29 @@ Processing by UsersController#update as */*
 Completed 200 OK in 118ms (Views: 1.1ms | ActiveRecord: 20.8ms)
 
 
+Started DELETE "/users/2" for ::1 at 2020-03-05 17:16:36 -0800
+Processing by UsersController#destroy as */*
+  Parameters: {"user"=>{"name"=>"josh"}, "id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28
+  [1m[36mUser Destroy (1.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/users_controller.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28
+Completed 200 OK in 30ms (Views: 2.0ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/users/2" for ::1 at 2020-03-05 17:16:40 -0800
+Processing by UsersController#show as */*
+  Parameters: {"user"=>{"name"=>"josh"}, "id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/users_controller.rb:17:in `show'

@@ -7,12 +7,12 @@ class Artwork<ApplicationRecord
     primary_key: :id,
     foreign_key: :artist_id
 
-    belongs_to :artwork_shares,
+    has_many :artwork_shares,
     class_name: "ArtworkShare",
     foreign_key: :artwork_id,
     primary_key: :id
-# return the set of artworks that have been shared with that user (not the set of artworks that a user has shared with others).
-    has_many :shared_artworks, 
+# return the set of users with whom an artwork has been shared.
+    has_many :shared_viewers, 
     through:  :artwork_shares,
     source: :viewer
 

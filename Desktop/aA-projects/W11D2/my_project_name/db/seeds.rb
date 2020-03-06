@@ -10,4 +10,15 @@ User.destroy_all
 Artwork.destroy_all
 Artwork_share.destroy_all
 
-u1=User.save({})
+u1=User.create!(username:'john')
+u2=User.create!(username:'jess')
+u3=User.create!(username:'james')
+u4=User.create!(username:'jones')
+a1=Artwork.create!(title: 'Mona Lisa', image_url:'google.com', artist_id:u1.id)
+a2=Artwork.create!(title: 'Stary Night', image_url:'google1.com', artist_id:u2.id)
+a3=Artwork.create!(title: 'The Scream', image_url:'google2.com', artist_id:u3.id)
+a4=Artwork.create!(title: 'The Snore', image_url:'google3.com', artist_id:u4.id)
+as1=Artwork_share.create!(artwork_id:a1.id,viewer_id:u1.id)
+as1=Artwork_share.create!(artwork_id:a2.id,viewer_id:u1.id)
+as1=Artwork_share.create!(artwork_id:a3.id,viewer_id:u1.id)
+as1=Artwork_share.create!(artwork_id:a4.id,viewer_id:u2.id)

@@ -8,10 +8,6 @@ class ArtworkSharesController<ApplicationController
         end
     end
 
-    def index 
-
-    end
-
     def destroy
         artwork_share=ArtworkShare.find(params[:id])
         artwork_share.destroy

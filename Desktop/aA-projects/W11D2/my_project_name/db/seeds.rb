@@ -9,6 +9,7 @@
 User.destroy_all
 Artwork.destroy_all
 ArtworkShare.destroy_all
+Comment.destroy_all
 
 u1=User.create!(username:'john')
 u2=User.create!(username:'jess')
@@ -24,4 +25,5 @@ as1=ArtworkShare.create!(artwork_id:a3.id,viewer_id:u1.id)
 as1=ArtworkShare.create!(artwork_id:a1.id,viewer_id:u2.id)
 c1=Comment.create!(user_id: u1.id, artwork_id: a1.id,body:'Love this picture')
 c2=Comment.create!(user_id: u2.id, artwork_id: a1.id,body:'I don\'t')
+c3=Comment.create!(user_id: u1.id, artwork_id: a2.id,body:'New comment')
 

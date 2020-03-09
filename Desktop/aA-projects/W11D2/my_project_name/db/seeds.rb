@@ -21,4 +21,7 @@ a4=Artwork.create!(title: 'The Snore', image_url:'google3.com', artist_id:u4.id)
 as1=ArtworkShare.create!(artwork_id:a1.id,viewer_id:u1.id)
 as1=ArtworkShare.create!(artwork_id:a2.id,viewer_id:u1.id)
 as1=ArtworkShare.create!(artwork_id:a3.id,viewer_id:u1.id)
-as1=ArtworkShare.create!(artwork_id:a4.id,viewer_id:u2.id)
+as1=ArtworkShare.create!(artwork_id:a1.id,viewer_id:u2.id)
+c1=Comment.create!(user_id: u1.id, artwork_id: a1.id,body:'Love this picture')
+c2=Comment.create!(user_id: u2.id, artwork_id: a1.id,body:'I don\'t')
+

@@ -18,4 +18,9 @@ class Artwork<ApplicationRecord
     source: :viewer,
     dependent: :destroy
 
+    has_many :comments,
+    class_name: "Comment",
+    foreign_key: :artwork_id,
+    primary_key: :id
+
 end

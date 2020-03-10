@@ -1,8 +1,10 @@
 <h1>Cats Index Page</h1>
+
 <ul>
-    <% @cats.all do |cat| %>
+ 
+    <% @cats.each do |cat| %>
         <li>
-            <a href="<%=cat_url(cat)%>"><%=cat.name%></a>
+            <a href="<%=cat_url(cat)%>"><%=cat.name.capitalize%></a>
         </li>
     <% end %>
 </ul>

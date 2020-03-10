@@ -1,0 +1,8 @@
+<h1>Cats Index Page</h1>
+<ul>
+    <% @cats.all do |cat| %>
+        <li>
+            <a href="<%=cat_url(cat)%>"><%=cat.name%></a>
+        </li>
+    <% end %>
+</ul>

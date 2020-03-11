@@ -10,10 +10,20 @@ class CatsController < ApplicationController
     end
 
     def new
-
+        @cat=Cat.new
+        render :new
     end
 
     def edit
+        @cat=Cat.find(params[:id])
+        render :edit
+    end
 
+    def create
+        
+    end
+
+    def update
+        redirect_to "cats_url"
     end
 end

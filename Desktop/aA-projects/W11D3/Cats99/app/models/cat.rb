@@ -5,6 +5,12 @@ class Cat < ApplicationRecord
     SEX=['m','f'].freeze
     validates :color, inclusion: COLORS
     validates :sex, inclusion: SEX
+    dependent: :destroy
+
+    has_many :cat_rental_requests,
+    class_name: "CatRentalRequest",
+    foreign_key: :cat_id,
+    primary_key: :id
 
     def age
         current_year=Date.today.year

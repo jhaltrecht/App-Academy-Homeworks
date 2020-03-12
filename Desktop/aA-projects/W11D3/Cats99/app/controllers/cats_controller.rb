@@ -22,7 +22,7 @@ class CatsController < ApplicationController
     def create
         @cat=Cat.new(cat_params)
         if @cat.save!
-            redirect_to cats_url
+            redirect_to cat_url(@cat)
         else
             @cat.errors.full_messages
             render :new
@@ -32,7 +32,7 @@ class CatsController < ApplicationController
     def update
         @cat=Cat.find(params[:id])
         if @cat.update_attributes(cat_params)
-            redirect_to cat_url
+            redirect_to cat_url(@cat)
         else
             @cat.errors.full_messages
             render :edit

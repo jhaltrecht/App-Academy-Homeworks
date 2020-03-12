@@ -2218,3 +2218,1357 @@ Migrating to CreateCatRentalRequests (20200311181426)
   ↳ bin/rails:9
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/cat_rental_requests" for ::1 at 2020-03-11 12:37:14 -0700
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/d1dc689783623dae/variables" for ::1 at 2020-03-11 12:37:14 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 12:37:36 -0700
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/1c20452a951cf76f/variables" for ::1 at 2020-03-11 12:37:36 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 12:37:39 -0700
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/c88add9a88c8f820/variables" for ::1 at 2020-03-11 12:37:39 -0700
+Started POST "/__better_errors/c88add9a88c8f820/eval" for ::1 at 2020-03-11 12:37:54 -0700
+Started POST "/__better_errors/c88add9a88c8f820/eval" for ::1 at 2020-03-11 12:37:57 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 12:38:40 -0700
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/117a012f44193a6f/variables" for ::1 at 2020-03-11 12:38:40 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 12:38:41 -0700
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/f902416b5ffd96b1/variables" for ::1 at 2020-03-11 12:38:41 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 12:39:07 -0700
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/b1a583b1f000af57/variables" for ::1 at 2020-03-11 12:39:08 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 12:39:08 -0700
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/0f79d67f92eb70c3/variables" for ::1 at 2020-03-11 12:39:09 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 12:39:34 -0700
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/d49efabc9cc65212/variables" for ::1 at 2020-03-11 12:39:34 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 12:39:42 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/8016198587b42105/variables" for ::1 at 2020-03-11 12:39:42 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 12:39:48 -0700
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/f90b1fe741ee4399/variables" for ::1 at 2020-03-11 12:39:48 -0700
+Started POST "/__better_errors/f90b1fe741ee4399/eval" for ::1 at 2020-03-11 12:39:57 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 12:40:14 -0700
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/d1a460869798708a/variables" for ::1 at 2020-03-11 12:40:14 -0700
+Started POST "/__better_errors/d1a460869798708a/eval" for ::1 at 2020-03-11 12:40:17 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 12:40:58 -0700
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/ed5c4676515059c5/variables" for ::1 at 2020-03-11 12:40:58 -0700
+Started POST "/__better_errors/ed5c4676515059c5/eval" for ::1 at 2020-03-11 12:41:02 -0700
+Started GET "/cat_rental_request/new" for ::1 at 2020-03-11 12:43:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/cat_rental_request/new"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/cat_rental_request/new" for ::1 at 2020-03-11 12:43:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/cat_rental_request/new"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/cat_rental_request/new" for ::1 at 2020-03-11 12:44:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/cat_rental_request/new"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/cat_rental_request/new" for ::1 at 2020-03-11 12:45:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/cat_rental_request/new"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 12:45:51 -0700
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/eef40c9a63a7be86/variables" for ::1 at 2020-03-11 12:45:51 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 12:46:11 -0700
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/26a4962ae7401e8e/variables" for ::1 at 2020-03-11 12:46:11 -0700
+Started GET "/cat_rental_request/new" for ::1 at 2020-03-11 12:46:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/cat_rental_request/new"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/__better_errors/26a4962ae7401e8e/variables" for ::1 at 2020-03-11 12:46:35 -0700
+Started POST "/__better_errors/26a4962ae7401e8e/eval" for ::1 at 2020-03-11 12:46:41 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 12:48:00 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 12:48:01 -0700
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/54f8c7d82da352d3/variables" for ::1 at 2020-03-11 12:48:01 -0700
+Started POST "/__better_errors/54f8c7d82da352d3/eval" for ::1 at 2020-03-11 12:48:13 -0700
+Started POST "/__better_errors/54f8c7d82da352d3/eval" for ::1 at 2020-03-11 12:48:20 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 12:52:39 -0700
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/dd85260835022c7f/variables" for ::1 at 2020-03-11 12:52:39 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:00:44 -0700
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/def0286b716a3d9f/variables" for ::1 at 2020-03-11 13:00:44 -0700
+Started POST "/__better_errors/def0286b716a3d9f/eval" for ::1 at 2020-03-11 13:01:14 -0700
+Started POST "/__better_errors/def0286b716a3d9f/eval" for ::1 at 2020-03-11 13:01:20 -0700
+Started POST "/__better_errors/def0286b716a3d9f/eval" for ::1 at 2020-03-11 13:01:25 -0700
+Started POST "/__better_errors/def0286b716a3d9f/eval" for ::1 at 2020-03-11 13:01:31 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:02:33 -0700
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/1f4fe6cd2a711189/variables" for ::1 at 2020-03-11 13:02:33 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:04:45 -0700
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+
+NameError - uninitialized constant CatRentalRequestsController:
+
+Started POST "/__better_errors/aaf11f20dc385164/variables" for ::1 at 2020-03-11 13:04:45 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:06:18 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 10.4ms)
+
+
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/cat_rental_requests/new.html.erb:16:in `'
+  app/controllers/cat_rental_requests_controller.rb:4:in `new'
+
+Started POST "/__better_errors/3d5275a7c05c433b/variables" for ::1 at 2020-03-11 13:06:18 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:06:51 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/new.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected ':', expecting keyword_end
+    dependent: :destroy
+             ^:
+  app/models/cat.rb:8:in `'
+  app/views/cat_rental_requests/new.html.erb:6:in `_app_views_cat_rental_requests_new_html_erb__906283650195002639_70343621258680'
+  app/controllers/cat_rental_requests_controller.rb:4:in `new'
+
+Started POST "/__better_errors/85f6b40679829b04/variables" for ::1 at 2020-03-11 13:06:51 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:08:03 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 5.7ms)
+
+
+
+SyntaxError - syntax error, unexpected ':', expecting keyword_end
+    dependent: :destroy
+             ^:
+  app/models/cat.rb:13:in `'
+  app/views/cat_rental_requests/new.html.erb:6:in `_app_views_cat_rental_requests_new_html_erb__906283650195002639_70343589165420'
+  app/controllers/cat_rental_requests_controller.rb:4:in `new'
+
+Started POST "/__better_errors/a650a72ae4f63421/variables" for ::1 at 2020-03-11 13:08:03 -0700
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:08:28 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 359ms (Views: 337.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:09:23 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (1.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:09:47 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:10:57 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:7
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:11:04 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:12:27 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:12:58 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:12:59 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:13:16 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:13:25 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 278ms (Views: 241.7ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:13:55 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:14:28 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:14:29 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:14:29 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:14:30 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:15:02 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered cat_rental_requests/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:15:34 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:16:21 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:16:22 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:16:22 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:16:58 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:28:11 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 57ms (Views: 52.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:31:24 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:31:32 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 304ms (Views: 270.2ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:31:59 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:7
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-11 13:34:59 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 29ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 13:35:02 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 91ms (Views: 77.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 13:43:05 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.8ms)
+
+
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/cats/show.html.erb:55:in `'
+  app/controllers/cats_controller.rb:9:in `show'
+
+Started POST "/__better_errors/f24d3bdb908f4147/variables" for ::1 at 2020-03-11 13:43:05 -0700
+Started GET "/cats/1" for ::1 at 2020-03-11 13:43:32 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (3.8ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:42
+  Rendered cats/show.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 72ms (Views: 66.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 13:43:40 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:43
+  Rendered cats/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 13:43:48 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:42
+  Rendered cats/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 39ms (Views: 35.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 13:44:06 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:42
+  Rendered cats/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 13:44:20 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:42
+  Rendered cats/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 13:44:26 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.4ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:42
+  Rendered cats/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 13:45:12 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.4ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:41
+  Rendered cats/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 35ms (Views: 31.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 13:45:13 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.4ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:41
+  Rendered cats/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 32ms (Views: 28.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 13:45:14 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:41
+  Rendered cats/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 13:45:14 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:41
+  Rendered cats/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 13:46:53 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.4ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:41
+  Rendered cats/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 13:46:58 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.4ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:41
+  Rendered cats/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 13:50:24 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.1ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:42
+  Rendered cats/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 43ms (Views: 37.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 13:50:38 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.9ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:42
+  Rendered cats/show.html.erb within layouts/application (41618.0ms)
+Completed 200 OK in 41647ms (Views: 41643.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 13:52:25 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:7
+  Rendered cat_rental_requests/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 13:52:28 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.4ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:41
+  Rendered cats/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 16:54:00 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (1.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:7
+  Rendered cat_rental_requests/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 70ms (Views: 63.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 16:54:41 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (1.2ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:41
+  Rendered cats/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 41ms (Views: 35.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 16:54:44 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:7
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 16:57:18 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:7
+  Rendered cat_rental_requests/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 86ms (Views: 83.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 16:57:24 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:7
+  Rendered cat_rental_requests/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-11 16:57:32 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:7
+  Rendered cat_rental_requests/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-11 17:11:44 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (1.1ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:41
+  Rendered cats/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 107ms (Views: 96.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-12 10:22:18 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (1.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:7
+  Rendered cat_rental_requests/new.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 189ms (Views: 177.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-12 10:35:50 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:7
+  Rendered cat_rental_requests/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-03-12 10:37:28 -0700
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:6
+  Rendered cat_rental_requests/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 10:37:38 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"2", "start_date"=>"2000-02-22", "end_date"=>"2020-02-22"}}
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.5ms)
+
+
+
+ArgumentError - Unsupported argument type: true (TrueClass):
+  app/models/cat_rental_request.rb:20:in `overlapping_requests'
+  app/models/cat_rental_request.rb:24:in `overlapping_approved_requests'
+  app/models/cat_rental_request.rb:8:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:9:in `create'
+
+Started POST "/__better_errors/9caa85d5b8b2ef27/variables" for ::1 at 2020-03-12 10:37:38 -0700
+Started POST "/__better_errors/9caa85d5b8b2ef27/variables" for ::1 at 2020-03-12 10:38:54 -0700
+Started POST "/__better_errors/9caa85d5b8b2ef27/variables" for ::1 at 2020-03-12 10:38:55 -0700
+Started POST "/__better_errors/9caa85d5b8b2ef27/variables" for ::1 at 2020-03-12 10:40:24 -0700
+Started POST "/__better_errors/9caa85d5b8b2ef27/eval" for ::1 at 2020-03-12 10:40:52 -0700
+Started POST "/__better_errors/9caa85d5b8b2ef27/eval" for ::1 at 2020-03-12 10:41:00 -0700
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 10:41:39 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"2", "start_date"=>"2000-02-22", "end_date"=>"2020-02-22"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 9.5ms)
+
+
+
+ArgumentError - Unsupported argument type: true (TrueClass):
+  app/models/cat_rental_request.rb:20:in `overlapping_requests'
+  app/models/cat_rental_request.rb:24:in `overlapping_approved_requests'
+  app/models/cat_rental_request.rb:8:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:9:in `create'
+
+Started POST "/__better_errors/ff2c507a01e43b14/variables" for ::1 at 2020-03-12 10:41:39 -0700
+Started POST "/__better_errors/ff2c507a01e43b14/variables" for ::1 at 2020-03-12 10:41:49 -0700
+Started POST "/__better_errors/ff2c507a01e43b14/eval" for ::1 at 2020-03-12 10:41:54 -0700
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Started POST "/__better_errors/ff2c507a01e43b14/eval" for ::1 at 2020-03-12 10:42:59 -0700
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Started POST "/__better_errors/ff2c507a01e43b14/eval" for ::1 at 2020-03-12 10:43:02 -0700
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Started POST "/__better_errors/ff2c507a01e43b14/eval" for ::1 at 2020-03-12 10:43:23 -0700
+Started POST "/__better_errors/ff2c507a01e43b14/eval" for ::1 at 2020-03-12 10:43:51 -0700
+  [1m[36mCatRentalRequest Load (0.8ms)[0m  [1m[34mSELECT  cat_rental_requests.* FROM "cat_rental_requests" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 10:44:08 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"2", "start_date"=>"2000-02-22", "end_date"=>"2020-02-22"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+
+
+ArgumentError - Unsupported argument type: true (TrueClass):
+  app/models/cat_rental_request.rb:20:in `overlapping_requests'
+  app/models/cat_rental_request.rb:24:in `overlapping_approved_requests'
+  app/models/cat_rental_request.rb:8:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:9:in `create'
+
+Started POST "/__better_errors/c7a4c96e29e66d82/variables" for ::1 at 2020-03-12 10:44:08 -0700
+Started POST "/__better_errors/c7a4c96e29e66d82/variables" for ::1 at 2020-03-12 10:44:09 -0700
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 10:45:31 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-02-22", "end_date"=>"2020-02-24"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.9ms)
+
+
+
+ArgumentError - Unsupported argument type: true (TrueClass):
+  app/models/cat_rental_request.rb:20:in `overlapping_requests'
+  app/models/cat_rental_request.rb:24:in `overlapping_approved_requests'
+  app/models/cat_rental_request.rb:8:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:9:in `create'
+
+Started POST "/__better_errors/e3c43be14a7efbb6/variables" for ::1 at 2020-03-12 10:45:31 -0700
+Started POST "/__better_errors/e3c43be14a7efbb6/eval" for ::1 at 2020-03-12 10:46:43 -0700
+Started POST "/__better_errors/e3c43be14a7efbb6/eval" for ::1 at 2020-03-12 10:46:47 -0700
+Started POST "/__better_errors/e3c43be14a7efbb6/variables" for ::1 at 2020-03-12 10:46:59 -0700
+Started POST "/__better_errors/e3c43be14a7efbb6/eval" for ::1 at 2020-03-12 10:47:05 -0700
+Started POST "/__better_errors/e3c43be14a7efbb6/eval" for ::1 at 2020-03-12 10:47:22 -0700
+  [1m[36mCatRentalRequest Load (0.4ms)[0m  [1m[34mSELECT  cat_rental_requests.* FROM "cat_rental_requests" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Started POST "/__better_errors/e3c43be14a7efbb6/eval" for ::1 at 2020-03-12 10:47:27 -0700
+  [1m[36mCatRentalRequest Load (1.5ms)[0m  [1m[34mSELECT  cat_rental_requests.* FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 10:49:41 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-02-22", "end_date"=>"2020-02-24"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[36mCatRentalRequest Exists (9.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (start_date > '2020-02-24' OR end_date < '2020-02-22') AND ('APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 18.4ms)
+
+
+
+PG::InvalidTextRepresentation - ERROR:  invalid input syntax for type boolean: "APPROVED"
+LINE 1: ...e > '2020-02-24' OR end_date < '2020-02-22') AND ('APPROVED'...
+                                                             ^
+:
+  app/models/cat_rental_request.rb:8:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:9:in `create'
+
+Started POST "/__better_errors/0e65661fca544d4c/variables" for ::1 at 2020-03-12 10:49:41 -0700
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 10:51:02 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-02-22", "end_date"=>"2020-02-24"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 5.5ms)
+
+
+
+ArgumentError - Unsupported argument type: true (TrueClass):
+  app/models/cat_rental_request.rb:19:in `overlapping_requests'
+  app/models/cat_rental_request.rb:23:in `overlapping_approved_requests'
+  app/models/cat_rental_request.rb:8:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:9:in `create'
+
+Started POST "/__better_errors/c46f3ef8f2668cea/variables" for ::1 at 2020-03-12 10:51:02 -0700
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 10:52:27 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-02-22", "end_date"=>"2020-02-24"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 5.2ms)
+
+
+
+ArgumentError - Unsupported argument type: true (TrueClass):
+  app/models/cat_rental_request.rb:19:in `overlapping_requests'
+  app/models/cat_rental_request.rb:23:in `overlapping_approved_requests'
+  app/models/cat_rental_request.rb:8:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:9:in `create'
+
+Started POST "/__better_errors/3a34991f70c6d353/variables" for ::1 at 2020-03-12 10:52:27 -0700
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 10:54:21 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-02-22", "end_date"=>"2020-02-24"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[36mCatRentalRequest Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (start_date > '2020-02-24' OR end_date < '2020-02-22') AND ('APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:8
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 9.9ms)
+
+
+
+PG::InvalidTextRepresentation - ERROR:  invalid input syntax for type boolean: "APPROVED"
+LINE 1: ...e > '2020-02-24' OR end_date < '2020-02-22') AND ('APPROVED'...
+                                                             ^
+:
+  app/models/cat_rental_request.rb:8:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:9:in `create'
+
+Started POST "/__better_errors/a54e2180171bbf4f/variables" for ::1 at 2020-03-12 10:54:22 -0700
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 10:59:07 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-02-22", "end_date"=>"2020-02-24"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[36mCatRentalRequest Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (start_date > :end_date OR end_date < :start_date) AND ('APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:8
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 10.3ms)
+
+
+
+PG::SyntaxError - ERROR:  syntax error at or near ":"
+LINE 1: ...tal_requests"."cat_id" = $1 AND NOT (start_date > :end_date ...
+                                                             ^
+:
+  app/models/cat_rental_request.rb:8:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:9:in `create'
+
+Started POST "/__better_errors/d904527254f47618/variables" for ::1 at 2020-03-12 10:59:07 -0700
+Started POST "/__better_errors/d904527254f47618/eval" for ::1 at 2020-03-12 11:01:04 -0700
+  [1m[36mCatRentalRequest Load (1.1ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (start_date > :end_date OR end_date < :start_date) AND ('APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 11]]
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Started POST "/__better_errors/d904527254f47618/eval" for ::1 at 2020-03-12 11:01:12 -0700
+  [1m[36mCatRentalRequest Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (start_date > :end_date OR end_date < :start_date) AND ('APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:8
+Started POST "/__better_errors/d904527254f47618/eval" for ::1 at 2020-03-12 11:05:42 -0700
+  [1m[36mCatRentalRequest Load (1.0ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (start_date > :end_date OR end_date < :start_date) AND ('APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 11]]
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Started POST "/__better_errors/d904527254f47618/variables" for ::1 at 2020-03-12 11:06:17 -0700
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 11:07:00 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-02-22", "end_date"=>"2020-02-24"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[36mCatRentalRequest Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (start_date > :end_date OR end_date < :start_date) AND "cat_rental_requests"."status" = $2 LIMIT $3[0m  [["cat_id", 1], ["status", "'APPROVED'"], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 8.9ms)
+
+
+
+PG::SyntaxError - ERROR:  syntax error at or near ":"
+LINE 1: ...tal_requests"."cat_id" = $1 AND NOT (start_date > :end_date ...
+                                                             ^
+:
+  app/models/cat_rental_request.rb:8:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:9:in `create'
+
+Started POST "/__better_errors/a342dfc1bef47e04/variables" for ::1 at 2020-03-12 11:07:00 -0700
+Started POST "/__better_errors/a342dfc1bef47e04/eval" for ::1 at 2020-03-12 11:07:04 -0700
+  [1m[36mCatRentalRequest Load (1.1ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (start_date > :end_date OR end_date < :start_date) AND "cat_rental_requests"."status" = $2 LIMIT $3[0m  [["cat_id", 1], ["status", "'APPROVED'"], ["LIMIT", 11]]
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 11:07:34 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-02-22", "end_date"=>"2020-02-24"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[36mCatRentalRequest Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (start_date > self.end_date OR end_date < self.start_date) AND "cat_rental_requests"."status" = $2 LIMIT $3[0m  [["cat_id", 1], ["status", "'APPROVED'"], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 7.4ms)
+
+
+
+PG::UndefinedTable - ERROR:  missing FROM-clause entry for table "self"
+LINE 1: ...tal_requests"."cat_id" = $1 AND NOT (start_date > self.end_d...
+                                                             ^
+:
+  app/models/cat_rental_request.rb:8:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:9:in `create'
+
+Started POST "/__better_errors/b960de9156594965/variables" for ::1 at 2020-03-12 11:07:34 -0700
+Started POST "/__better_errors/b960de9156594965/eval" for ::1 at 2020-03-12 11:07:39 -0700
+  [1m[36mCatRentalRequest Load (0.9ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (start_date > self.end_date OR end_date < self.start_date) AND "cat_rental_requests"."status" = $2 LIMIT $3[0m  [["cat_id", 1], ["status", "'APPROVED'"], ["LIMIT", 11]]
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 11:08:04 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-02-22", "end_date"=>"2020-02-24"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 7.6ms)
+
+
+
+NameError - undefined local variable or method `cat_rental_requests' for #<CatRentalRequest:0x00007fd0343869c0>:
+  app/models/cat_rental_request.rb:19:in `overlapping_requests'
+  app/models/cat_rental_request.rb:23:in `overlapping_approved_requests'
+  app/models/cat_rental_request.rb:8:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:9:in `create'
+
+Started POST "/__better_errors/f6b33092a4bf9e8f/variables" for ::1 at 2020-03-12 11:08:05 -0700
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 11:08:54 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-02-22", "end_date"=>"2020-02-24"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[36mCatRentalRequest Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (cat_rental_requests.start_date > self.end_date OR cat_rental_requests.end_date < self.start_date) AND "cat_rental_requests"."status" = $2 LIMIT $3[0m  [["cat_id", 1], ["status", "'APPROVED'"], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 9.2ms)
+
+
+
+PG::UndefinedTable - ERROR:  missing FROM-clause entry for table "self"
+LINE 1: ...d" = $1 AND NOT (cat_rental_requests.start_date > self.end_d...
+                                                             ^
+:
+  app/models/cat_rental_request.rb:8:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:9:in `create'
+
+Started POST "/__better_errors/b333a42ef7dcbef8/variables" for ::1 at 2020-03-12 11:08:55 -0700
+Started POST "/__better_errors/b333a42ef7dcbef8/eval" for ::1 at 2020-03-12 11:08:59 -0700
+  [1m[36mCatRentalRequest Load (1.1ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (cat_rental_requests.start_date > self.end_date OR cat_rental_requests.end_date < self.start_date) AND "cat_rental_requests"."status" = $2 LIMIT $3[0m  [["cat_id", 1], ["status", "'APPROVED'"], ["LIMIT", 11]]
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 11:09:17 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-02-22", "end_date"=>"2020-02-24"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[36mCatRentalRequest Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (cat_rental_requests.start_date > :end_date OR cat_rental_requests.end_date < :start_date) AND "cat_rental_requests"."status" = $2 LIMIT $3[0m  [["cat_id", 1], ["status", "'APPROVED'"], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 7.0ms)
+
+
+
+PG::SyntaxError - ERROR:  syntax error at or near ":"
+LINE 1: ...d" = $1 AND NOT (cat_rental_requests.start_date > :end_date ...
+                                                             ^
+:
+  app/models/cat_rental_request.rb:8:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:9:in `create'
+
+Started POST "/__better_errors/680a4561c80387c1/variables" for ::1 at 2020-03-12 11:09:17 -0700
+Started POST "/__better_errors/680a4561c80387c1/eval" for ::1 at 2020-03-12 11:09:22 -0700
+  [1m[36mCatRentalRequest Load (1.0ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (cat_rental_requests.start_date > :end_date OR cat_rental_requests.end_date < :start_date) AND "cat_rental_requests"."status" = $2 LIMIT $3[0m  [["cat_id", 1], ["status", "'APPROVED'"], ["LIMIT", 11]]
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 11:09:44 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-02-22", "end_date"=>"2020-02-24"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[36mCatRentalRequest Exists (3.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (cat_rental_requests.start_date > end_date OR cat_rental_requests.end_date < :start_date) AND "cat_rental_requests"."status" = $2 LIMIT $3[0m  [["cat_id", 1], ["status", "'APPROVED'"], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 8.7ms)
+
+
+
+PG::SyntaxError - ERROR:  syntax error at or near ":"
+LINE 1: ...date > end_date OR cat_rental_requests.end_date < :start_dat...
+                                                             ^
+:
+  app/models/cat_rental_request.rb:8:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:9:in `create'
+
+Started POST "/__better_errors/287b8ebbd4b893d2/variables" for ::1 at 2020-03-12 11:09:45 -0700
+Started POST "/__better_errors/287b8ebbd4b893d2/eval" for ::1 at 2020-03-12 11:09:47 -0700
+  [1m[36mCatRentalRequest Load (1.0ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (cat_rental_requests.start_date > end_date OR cat_rental_requests.end_date < :start_date) AND "cat_rental_requests"."status" = $2 LIMIT $3[0m  [["cat_id", 1], ["status", "'APPROVED'"], ["LIMIT", 11]]
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 11:10:01 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-02-22", "end_date"=>"2020-02-24"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[36mCatRentalRequest Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (cat_rental_requests.start_date > end_date OR cat_rental_requests.end_date < start_date) AND "cat_rental_requests"."status" = $2 LIMIT $3[0m  [["cat_id", 1], ["status", "'APPROVED'"], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:8
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[36mCatRentalRequest Create (7.5ms)[0m  [1m[32mINSERT INTO "cat_rental_requests" ("cat_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cat_id", 1], ["start_date", "2020-02-22"], ["end_date", "2020-02-24"], ["created_at", "2020-03-12 18:10:01.102941"], ["updated_at", "2020-03-12 18:10:01.102941"]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Redirected to http://localhost:3000/cats/1
+Completed 302 Found in 60ms (ActiveRecord: 24.0ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-12 11:10:01 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.8ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:41
+  Rendered cats/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 53ms (Views: 50.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-12 11:15:00 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.4ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:41
+  Rendered cats/show.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 76ms (Views: 47.1ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-12 11:15:01 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:41
+  Rendered cats/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 36ms (Views: 32.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-03-12 11:15:10 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.0ms)
+  Rendered cats/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 71ms (Views: 43.4ms | ActiveRecord: 9.1ms)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 11:15:27 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2021-02-22", "end_date"=>"2222-02-24"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[36mCatRentalRequest Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (cat_rental_requests.start_date > '2222-02-24' end_date OR cat_rental_requests.end_date < '2021-02-22') AND "cat_rental_requests"."status" = $2 LIMIT $3[0m  [["cat_id", 1], ["status", "'APPROVED'"], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 7.6ms)
+
+
+
+PG::SyntaxError - ERROR:  syntax error at or near "end_date"
+LINE 1: ...OT (cat_rental_requests.start_date > '2222-02-24' end_date O...
+                                                             ^
+:
+  app/models/cat_rental_request.rb:8:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:9:in `create'
+
+Started POST "/__better_errors/fbc89432bec29141/variables" for ::1 at 2020-03-12 11:15:27 -0700
+Started POST "/__better_errors/fbc89432bec29141/eval" for ::1 at 2020-03-12 11:15:34 -0700
+  [1m[36mCatRentalRequest Load (2.2ms)[0m  [1m[34mSELECT  "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (cat_rental_requests.start_date > '2222-02-24' end_date OR cat_rental_requests.end_date < '2021-02-22') AND "cat_rental_requests"."status" = $2 LIMIT $3[0m  [["cat_id", 1], ["status", "'APPROVED'"], ["LIMIT", 11]]
+  ↳ /Users/test/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Started POST "/cat_rental_requests" for ::1 at 2020-03-12 11:15:49 -0700
+Processing by CatRentalRequestsController#create as HTML
+  Parameters: {"cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2021-02-22", "end_date"=>"2222-02-24"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[36mCatRentalRequest Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (cat_rental_requests.start_date > '2222-02-24' OR cat_rental_requests.end_date < '2021-02-22') AND "cat_rental_requests"."status" = $2 LIMIT $3[0m  [["cat_id", 1], ["status", "'APPROVED'"], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:8
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[36mCatRentalRequest Create (0.4ms)[0m  [1m[32mINSERT INTO "cat_rental_requests" ("cat_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cat_id", 1], ["start_date", "2021-02-22"], ["end_date", "2222-02-24"], ["created_at", "2020-03-12 18:15:49.334526"], ["updated_at", "2020-03-12 18:15:49.334526"]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:9
+Redirected to http://localhost:3000/cats/1
+Completed 302 Found in 71ms (ActiveRecord: 22.0ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-12 11:15:49 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:41
+  Rendered cats/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-03-12 11:16:05 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:41
+  Rendered cats/show.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 67ms (Views: 42.4ms | ActiveRecord: 10.1ms)
+
+

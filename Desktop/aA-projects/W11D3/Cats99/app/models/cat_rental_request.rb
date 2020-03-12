@@ -16,12 +16,21 @@ class CatRentalRequest<ApplicationRecord
     primary_key: :id
 
     def overlapping_requests
-        CatRentalRequest.select("cat_rental_requests.*")
-        .where.not(id: self.id).where(cat_id: self.cat_id).where.not(start_date.between?(self.start_date,self.end_date),end_date.between?(self.start_date,self.end_date))
+        CatRentalRequest.where.not(id: self.id).where(cat_id: self.cat_id).where.not('cat_rental_requests.start_date > ? OR cat_rental_requests.end_date < ?', self.end_date,self.start_date)
     end
 
     def overlapping_approved_requests
-        overlapping_requests.where(status='\'APPROVED\'')
+        overlapping_requests.where(status: '\'APPROVED\'')
+    end
+
+    def approve!
+        raise "Not Pending" unless self.status='\'PENDING\''
+        self.status='\'APPROVED\''
+        self.save!
+    end
+
+    def overlapping_pending_requests
+       overlapping_requests.where(status: '\'PENDING\'')
     end
 
 end

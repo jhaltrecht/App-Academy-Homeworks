@@ -108,6 +108,9 @@ textarea {
 label {
     display: block;
 }
+.hamburger-dropdown{
+    display: none;
+  }
 
 /* Media Queries! */
 @media all and (max-width: 900px) {
@@ -145,4 +148,3 @@ width: 550px
 
 
 }
-

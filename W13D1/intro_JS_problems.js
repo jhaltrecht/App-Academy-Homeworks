@@ -20,5 +20,31 @@ function fizzBuzz(array) {
     return newArray
 }
 
-array=[3,2,15,5,7]
-console.log(fizzBuzz(array))
+// array=[3,2,15,5,7]
+// console.log(fizzBuzz(array))
+
+function isPrime(num) {
+    for(i=2; i<num; i++) {
+         if (num%i===0) {
+             return false
+         }
+    }
+    return true
+}
+
+console.log(isPrime(2))
+console.log(isPrime(10))
+console.log(isPrime(15485863))
+console.log(isPrime(3548563))
+
+function sumOfNPrimes(num) {
+    
+}
+
+function firstNPrimes(num) {
+    
+}
+
+console.log(sumOfNPrimes(0))
+console.log(sumOfNPrimes(1))
+console.log(sumOfNPrimes(4))

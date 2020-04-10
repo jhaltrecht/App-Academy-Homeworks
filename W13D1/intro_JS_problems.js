@@ -61,6 +61,18 @@ function firstNPrimes(num) {
 
 // console.log(firstNPrimes(4))
 
-console.log(sumOfNPrimes(0))
-console.log(sumOfNPrimes(1))
-console.log(sumOfNPrimes(4))
+// console.log(sumOfNPrimes(0))
+// console.log(sumOfNPrimes(1))
+
+// console.log(sumOfNPrimes(4))
+
+function printCallback(names) {
+    names.forEach(name=>console.log(name))
+}
+
+function titleize(names,printCallback) {
+    let newNames = names.map((name) => `Mx. ${name} Jingleheimer Schmidt`);
+  printCallback(newNames)
+}
+
+// console.log(titleize(["Mary", "Brian", "Leo"], printCallback));

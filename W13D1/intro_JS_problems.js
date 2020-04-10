@@ -110,3 +110,17 @@ Elephant.paradeHelper=function (elephant) {
 }
 // herd.forEach(Elephant.paradeHelper);
 
+function dinerBreakfast() {
+    let order = "I'd like cheesy scrambled eggs please.";
+    console.log(order)
+    return function (food) {
+        order=`${order.slice(0,order.length-8)} and ${food} please.`
+        console.log(order)
+    }
+}
+
+
+
+let bfastOrder = dinerBreakfast();
+bfastOrder("chocolate chip pancakes");
+bfastOrder("grits");

@@ -67,12 +67,35 @@ function firstNPrimes(num) {
 // console.log(sumOfNPrimes(4))
 
 function printCallback(names) {
-    names.forEach(name=>console.log(name))
+    names.forEach(name=>console.log(name));
 }
 
 function titleize(names,printCallback) {
     let newNames = names.map((name) => `Mx. ${name} Jingleheimer Schmidt`);
-  printCallback(newNames)
+  printCallback(newNames);
 }
 
 // console.log(titleize(["Mary", "Brian", "Leo"], printCallback));
+
+function Elephant(name,height,tricks){
+    this.name=name;
+    this.height=height;
+    this.tricks=tricks;
+}
+let dumbo = new Elephant('Dumbo', 156, ['bouncing a ball']);
+
+Elephant.prototype.trumpet =  function () { console.log(`${this.name} the elephant goes 'phrRRRRRRRRRRR!!!!!!!'`)};
+// dumbo.trumpet()
+
+Elephant.prototype.grow = function () { this.height+=12};
+// console.log(dumbo.height)
+dumbo.grow()
+// console.log(dumbo.height)
+Elephant.prototype.addTrick = function(new_trick) { this.tricks.push(new_trick) }
+dumbo.addTrick("laying down")
+// console.log(dumbo.tricks)
+Elephant.prototype.play=function(){
+    let random_index=Math.floor(Math.random() * (this.tricks.length)) 
+    console.log(this.tricks[random_index])
+}
+dumbo.play()

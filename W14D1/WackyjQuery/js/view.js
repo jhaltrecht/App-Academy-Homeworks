@@ -58,6 +58,12 @@ View.prototype.exercise5 = function () {
   //hint: checkout the addRow function at the bottom of the file: we set the
   //  'data-pos' of every square
 
+  $('.row.group').on("click", (event) =>{
+    const $sq=$(event.target);
+    alert($sq.attr("data-pos"));
+  })
+
+
   //your code here!
 };
 
@@ -65,7 +71,12 @@ View.prototype.exercise6 = function () {
   //Challenge: Give every square a random color!
   //Result: Every square becomes a color as soon as this code runs. The grid
   //should become a beautiful rainbow of colors.
-
+  $('.square').each( (index,sqr)=>
+    var $sqr=$(sqr);
+    $sqr.css("background-color", window._randomColorString())
+  )
+  
+  }
   //hint: use window._randomColorString() (defined at top) to get a random color!
 
   //your code here!
@@ -77,8 +88,11 @@ View.prototype.exercise7 = function(){
   //console. The color won't be the color's name, but its rbg value.
   //You should push the button for exercise 6 first to try it on the
   //rainbow.
-
+  $('.row.group').on("mouseenter",".square" ,(event) => {
+    const $sq = $(event.target);
+    console.log($sq.css("background-color"))
   //your code here!
+})
 };
 
 

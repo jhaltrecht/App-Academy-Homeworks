@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // adding SF places as list items
   const addLi=(e) =>{
     e.preventDefault();
-    const nameInput = document.querySelector(".favorite-input")
+    const nameInput = document.querySelector(".favorite-input");
     const nameInputVal = nameInput.value;
     nameInput.value = "";
     const li = document.createElement("li");
@@ -43,8 +43,21 @@ listSubmitButton.addEventListener("click", addLi);
     }
   };
   // --- your code here!
-  const photoShowButton = document.querySelector(".photo-show-button")
-  photoShowButton.addEventListener("click",togglePhotoForm)
-
-
+  const photoShowButton = document.querySelector(".photo-show-button");
+  photoShowButton.addEventListener("click",togglePhotoForm);
+  
+  const handlePhotoSubmit = (e) => {
+    e.preventDefault();
+    const photoUrlInput = document.querySelector(".photo-url-input");
+    const photoUrlInputValue=photoUrlInput.value;
+    photoUrlInputURLInput.value="";
+    const li=document.createElement("li");
+    const img=document.createElement("img");
+    img.src=photoUrlInputValue;
+    const ul = document.querySelector("dog-photos");
+    li.append(img);
+    ul.append(li);
+  }
+  const photoSubmit = document.querySelector(".photo-url-submit");
+  photoSubmit.addEventListener("click",handlePhotoSubmit);
 });

@@ -1,0 +1,37 @@
+html, body, img, nav, ul, li, a, p{
+   
+}
+li{
+    display: inline-block;
+}
+a{
+        padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+ul{
+     list-style: none;
+margin: 0;
+  padding: 0;
+}
+nav{
+    margin: 20px;
+    
+
+}
+.signIn{
+    color: green;
+    border: 1px solid green;
+}
+.signUp{
+    color: green;
+}
+.signUp:hover{
+    color: lightgreen;
+}
+.signIn:hover{
+    background-color:green ;
+    color: white;
+}
+

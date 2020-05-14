@@ -90,10 +90,17 @@
 /*!*****************************!*\
   !*** ./frontend/actions.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var selectLocation = function selectLocation(city, jobs) {
+  type: "SWITCH_LOCATION", city, jobs;
+};
 
+window.selectLocation = selectLocation;
+/* harmony default export */ __webpack_exports__["default"] = (selectLocation);
 
 /***/ }),
 
@@ -147,7 +154,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _job__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./job */ "./frontend/components/job.jsx");
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../actions */ "./frontend/actions.js");
-/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_actions__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -186,7 +192,7 @@ function (_React$Component) {
     _this.props.store.subscribe(_this.forceUpdate);
 
     _this.cities = ["San Francisco", "Seattle", "New York", "Austin", "Remote"];
-    _this.selectLocation = _actions__WEBPACK_IMPORTED_MODULE_2___default.a.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.selectLocation = _actions__WEBPACK_IMPORTED_MODULE_2__["default"].bind(_assertThisInitialized(_assertThisInitialized(_this)));
     return _this;
   }
 
@@ -280,6 +286,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /***/ }),
 
+/***/ "./frontend/reducer.js":
+/*!*****************************!*\
+  !*** ./frontend/reducer.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var initialState = {
+  city: "Please Select",
+  jobs: []
+};
+
+var reducer = function reducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case "SWITCH_LOCATION":
+      return {
+        city: action.city,
+        jobs: action.jobs
+      };
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (reducer);
+
+/***/ }),
+
 /***/ "./frontend/store.js":
 /*!***************************!*\
   !*** ./frontend/store.js ***!
@@ -290,10 +330,10 @@ document.addEventListener("DOMContentLoaded", function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/index.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './frontend/reducer.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _reducer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reducer.js */ "./frontend/reducer.js");
 
 
-var store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(!(function webpackMissingModule() { var e = new Error("Cannot find module './frontend/reducer.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+var store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducer_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
 /* harmony default export */ __webpack_exports__["default"] = (store);
 
 /***/ }),
